@@ -1,0 +1,104 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Mantenimiento de Materias</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    @* <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>*@
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link href="/Content/CSS/Grados.css" rel="stylesheet" />
+    <link href="/Content/CSS/Sprite.css" rel="stylesheet" />
+    <link href="~/Content/CSS/Layout.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h2>Materias</h2>
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div id="kendoGrid">
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Edit Materia Modal -->
+    <div id="dialog-containerEDT">
+        <div id="dialogEDT" title="Editar los detalles de una materia">
+            <form>
+                <input type="hidden" id="editMateriaId">
+                <div class="input-field">
+                    <label for="editMateriaNombre">Nombre</label>
+                    <input type="text" id="editMateriaNombre">
+                </div>
+                <div class="input-field">
+                    <label for="editMateriaCodigo">Código</label>
+                    <input type="text" id="editMateriaCodigo">
+                </div>
+                <div class="input-field">
+                    <label for="editCant_CreditosMateria">Cantidad de Créditos</label>
+                    <input type="text" id="editCant_CreditosMateria">
+                </div>
+                <div class="input-field">
+                    <label for="editCant_HorasMateria">Cantidad de Horas</label>
+                    <input type="text" id="editCant_HorasMateria">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Delete Materia Modal -->
+    <div id="dialog-containerDEL">
+        <div id="dialogDEL" title="Eliminar el registro de una Materia">
+            <form>
+                <input type="hidden" id="DeleteMateriaId">
+                <p>¿Está seguro que desea eliminar esta Materia?</p>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Insert Materia Modal -->
+    <div id="dialog-containerINS">
+        <div id="dialogINS" title="Agregar una nueva materia">
+            <form>
+                <div class="input-field">
+                    <label for="insMateriaNombre">Nombre</label>
+                    <input type="text" id="insMateriaNombre">
+                </div>
+                <div class="input-field">
+                    <label for="insMateriaCodigo">Código</label>
+                    <input type="text" id="insMateriaCodigo">
+                </div>
+                <div class="input-field">
+                    <label for="insCant_Creditos">Cantidad de créditos</label>
+                    <input type="text" id="insCant_Creditos">
+                </div>
+                <div class="input-field">
+                    <label for="insCant_Horas">Cantidad de horas</label>
+                    <input type="text" id="insCant_Horas">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    @*<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>*@
+</body>
+</html>
+
+@section scripts{
+    @Scripts.Render("~/Scripts/MantenimientoMaterias.js")
+}</html>

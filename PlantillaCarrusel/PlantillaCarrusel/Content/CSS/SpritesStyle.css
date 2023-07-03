@@ -1,0 +1,18 @@
+﻿.MusicPlayer {
+    background-image: url("/Content/IMG/Crossing.png") !important;
+    background-repeat: no-repeat;
+    width: 142px;
+    height: 142px;
+    background-position: -532px -532px;
+    transform: scale(.3);
+}
+
+
+.LgnBTN {
+    background-image: url("/Content/IMG/Crossing.png") !important;
+    background-repeat: no-repeat;
+    width: 142px;
+    height: 142px;
+    background-position: -1995px -266px;
+    transform: scale(.5)
+}

@@ -1,0 +1,105 @@
+﻿/* Set padding to keep content from hitting the edges */
+.body-content {
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.no-close .ui-dialog-titlebar-close {
+    display: none;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+nav {
+    background-color: #0094ff;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    a:hover {
+        background-color: #555;
+    }
+
+ab {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.carousel-container {
+    max-width: auto;
+    margin: 0 auto;
+}
+
+.carousel-inner img {
+    max-width: auto;
+    max-height: 300px;
+    margin: 0 auto;
+}
+
+.menu {
+    background-color: #333;
+    margin-top: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    nav ul {
+        display: flex;
+    }
+
+    nav li {
+        margin: 0 10px;
+    }
+
+a {
+    padding: 10px 15px;
+}
+
+    a:hover {
+        background-color: #555;
+    }
+/* ESTO VIENE DEL LAYOUT;*/
+#logo {
+    /* width: 1011px;
+    height: 705px;*/
+    width: 1900px;
+    height: 200px; /* Para mantener la relación de aspecto */
+}

@@ -1,0 +1,2105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SistemaMatriculaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Alumno">
+          <Key>
+            <PropertyRef Name="id_Alumno" />
+          </Key>
+          <Property Name="id_Alumno" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Fecha_Ingreso" Type="date" Nullable="false" />
+          <Property Name="Cedula" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="Genero" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Fecha_Nacimiento" Type="date" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Apellido1" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Apellido2" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Direccion" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="Telefono1" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Telefono2" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Correo" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="id_Provincia" Type="int" Nullable="false" />
+          <Property Name="id_Canton" Type="int" Nullable="false" />
+          <Property Name="id_Distrito" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Canton">
+          <Key>
+            <PropertyRef Name="id_Canton" />
+          </Key>
+          <Property Name="id_Canton" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_Provincia" Type="int" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioCrea" Type="varchar" MaxLength="50" />
+          <Property Name="fechaCrea" Type="datetime" />
+          <Property Name="usuarioModifica" Type="varchar" MaxLength="50" />
+          <Property Name="fechaModifica" Type="datetime" />
+          <Property Name="vc_Estado" Type="varchar" MaxLength="3" />
+          <Property Name="id_CantonInec" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Carreras">
+          <Key>
+            <PropertyRef Name="id_Carrera" />
+          </Key>
+          <Property Name="id_Carrera" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_Grado" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="500" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Distrito">
+          <Key>
+            <PropertyRef Name="id_Distrito" />
+          </Key>
+          <Property Name="id_Distrito" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_Canton" Type="int" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioCrea" Type="varchar" MaxLength="50" />
+          <Property Name="fechaCrea" Type="datetime" />
+          <Property Name="usuarioModifica" Type="varchar" MaxLength="50" />
+          <Property Name="fechaModifica" Type="datetime" />
+          <Property Name="vc_Estado" Type="varchar" MaxLength="3" />
+          <Property Name="id_DistritoInec" Type="int" />
+        </EntityType>
+        <EntityType Name="EnvioCorreos">
+          <Key>
+            <PropertyRef Name="id_Envio" />
+          </Key>
+          <Property Name="id_Envio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Destinatario" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Asunto" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Cuerpo" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="Estado" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Bitacora" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Grados">
+          <Key>
+            <PropertyRef Name="id_Grado" />
+          </Key>
+          <Property Name="id_Grado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="500" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Materias">
+          <Key>
+            <PropertyRef Name="id_Materia" />
+          </Key>
+          <Property Name="id_Materia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Codigo" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Cant_Creditos" Type="int" Nullable="false" />
+          <Property Name="Cant_Horas" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MateriasCarrera">
+          <Key>
+            <PropertyRef Name="id_Carrera" />
+            <PropertyRef Name="id_Materia" />
+          </Key>
+          <Property Name="id_Carrera" Type="int" Nullable="false" />
+          <Property Name="id_Materia" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Matricula">
+          <Key>
+            <PropertyRef Name="id_Matricula" />
+          </Key>
+          <Property Name="id_Matricula" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_Materia" Type="int" Nullable="false" />
+          <Property Name="id_Alumno" Type="int" Nullable="false" />
+          <Property Name="Nota" Type="int" Nullable="false" />
+          <Property Name="id_Periodo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Periodos">
+          <Key>
+            <PropertyRef Name="id_Periodo" />
+          </Key>
+          <Property Name="id_Periodo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Codigo" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Fecha_Inicio" Type="date" Nullable="false" />
+          <Property Name="Fecha_Fin" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Provincia">
+          <Key>
+            <PropertyRef Name="id_Provincia" />
+          </Key>
+          <Property Name="id_Provincia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="usuarioCrea" Type="varchar" MaxLength="50" />
+          <Property Name="fechaCrea" Type="datetime" />
+          <Property Name="usuarioModifica" Type="varchar" MaxLength="50" />
+          <Property Name="fechaModifica" Type="datetime" />
+          <Property Name="vc_Estado" Type="varchar" MaxLength="3" />
+        </EntityType>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="id_Usuario" />
+          </Key>
+          <Property Name="id_Usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_Alumno" Type="int" />
+          <Property Name="Usuario" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Contrasena" Type="binary" MaxLength="64" Nullable="false" />
+          <Property Name="UltimaAccion" Type="datetime" Nullable="false" />
+          <Property Name="Activo" Type="bit" Nullable="false" />
+          <Property Name="EsAlumno" Type="bit" Nullable="false" />
+        </EntityType>
+        <Association Name="Canton_ref_Provincia">
+          <End Role="Provincia" Type="Self.Provincia" Multiplicity="1" />
+          <End Role="Canton" Type="Self.Canton" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provincia">
+              <PropertyRef Name="id_Provincia" />
+            </Principal>
+            <Dependent Role="Canton">
+              <PropertyRef Name="id_Provincia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Distrito_ref_Canton">
+          <End Role="Canton" Type="Self.Canton" Multiplicity="0..1" />
+          <End Role="Distrito" Type="Self.Distrito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Canton">
+              <PropertyRef Name="id_Canton" />
+            </Principal>
+            <Dependent Role="Distrito">
+              <PropertyRef Name="id_Canton" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Alumno__id_Canto__55009F39">
+          <End Role="Canton" Type="Self.Canton" Multiplicity="1" />
+          <End Role="Alumno" Type="Self.Alumno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Canton">
+              <PropertyRef Name="id_Canton" />
+            </Principal>
+            <Dependent Role="Alumno">
+              <PropertyRef Name="id_Canton" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Alumno__id_Canto__6E01572D">
+          <End Role="Canton" Type="Self.Canton" Multiplicity="1" />
+          <End Role="Alumno" Type="Self.Alumno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Canton">
+              <PropertyRef Name="id_Canton" />
+            </Principal>
+            <Dependent Role="Alumno">
+              <PropertyRef Name="id_Canton" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Alumno__id_Distr__55F4C372">
+          <End Role="Distrito" Type="Self.Distrito" Multiplicity="1" />
+          <End Role="Alumno" Type="Self.Alumno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Distrito">
+              <PropertyRef Name="id_Distrito" />
+            </Principal>
+            <Dependent Role="Alumno">
+              <PropertyRef Name="id_Distrito" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Alumno__id_Distr__6EF57B66">
+          <End Role="Distrito" Type="Self.Distrito" Multiplicity="1" />
+          <End Role="Alumno" Type="Self.Alumno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Distrito">
+              <PropertyRef Name="id_Distrito" />
+            </Principal>
+            <Dependent Role="Alumno">
+              <PropertyRef Name="id_Distrito" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Alumno__id_Provi__540C7B00">
+          <End Role="Provincia" Type="Self.Provincia" Multiplicity="1" />
+          <End Role="Alumno" Type="Self.Alumno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provincia">
+              <PropertyRef Name="id_Provincia" />
+            </Principal>
+            <Dependent Role="Alumno">
+              <PropertyRef Name="id_Provincia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Alumno__id_Provi__6D0D32F4">
+          <End Role="Provincia" Type="Self.Provincia" Multiplicity="1" />
+          <End Role="Alumno" Type="Self.Alumno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provincia">
+              <PropertyRef Name="id_Provincia" />
+            </Principal>
+            <Dependent Role="Alumno">
+              <PropertyRef Name="id_Provincia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Carreras__Descri__5AEE82B9">
+          <End Role="Grados" Type="Self.Grados" Multiplicity="1" />
+          <End Role="Carreras" Type="Self.Carreras" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grados">
+              <PropertyRef Name="id_Grado" />
+            </Principal>
+            <Dependent Role="Carreras">
+              <PropertyRef Name="id_Grado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MateriasC__id_Ca__66603565">
+          <End Role="Carreras" Type="Self.Carreras" Multiplicity="1" />
+          <End Role="MateriasCarrera" Type="Self.MateriasCarrera" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Carreras">
+              <PropertyRef Name="id_Carrera" />
+            </Principal>
+            <Dependent Role="MateriasCarrera">
+              <PropertyRef Name="id_Carrera" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MateriasC__id_Ma__6754599E">
+          <End Role="Materias" Type="Self.Materias" Multiplicity="1" />
+          <End Role="MateriasCarrera" Type="Self.MateriasCarrera" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Materias">
+              <PropertyRef Name="id_Materia" />
+            </Principal>
+            <Dependent Role="MateriasCarrera">
+              <PropertyRef Name="id_Materia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Matricula__id_Al__0B91BA14">
+          <End Role="Alumno" Type="Self.Alumno" Multiplicity="1" />
+          <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Alumno">
+              <PropertyRef Name="id_Alumno" />
+            </Principal>
+            <Dependent Role="Matricula">
+              <PropertyRef Name="id_Alumno" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Matricula__id_Ma__0A9D95DB">
+          <End Role="Materias" Type="Self.Materias" Multiplicity="1" />
+          <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Materias">
+              <PropertyRef Name="id_Materia" />
+            </Principal>
+            <Dependent Role="Matricula">
+              <PropertyRef Name="id_Materia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Matricula__id_Pe__0C85DE4D">
+          <End Role="Periodos" Type="Self.Periodos" Multiplicity="1" />
+          <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Periodos">
+              <PropertyRef Name="id_Periodo" />
+            </Principal>
+            <Dependent Role="Matricula">
+              <PropertyRef Name="id_Periodo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Usuarios__id_Alu__797309D9">
+          <End Role="Alumno" Type="Self.Alumno" Multiplicity="0..1" />
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Alumno">
+              <PropertyRef Name="id_Alumno" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="id_Alumno" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="RetornaCantones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nombre" Type="varchar" Mode="In" />
+          <Parameter Name="id_Provincia" Type="int" Mode="In" />
+        </Function>
+        <Function Name="RetornaCantonesID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Canton" Type="int" Mode="In" />
+        </Function>
+        <Function Name="RetornaProvincias" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_ActualizaAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Alumno" Type="int" Mode="In" />
+          <Parameter Name="Fecha_Ingreso" Type="date" Mode="In" />
+          <Parameter Name="Cedula" Type="varchar" Mode="In" />
+          <Parameter Name="Genero" Type="char" Mode="In" />
+          <Parameter Name="Fecha_Nacimiento" Type="date" Mode="In" />
+          <Parameter Name="Nombre" Type="varchar" Mode="In" />
+          <Parameter Name="Apellido1" Type="varchar" Mode="In" />
+          <Parameter Name="Apellido2" Type="varchar" Mode="In" />
+          <Parameter Name="Direccion" Type="varchar" Mode="In" />
+          <Parameter Name="Telefono1" Type="varchar" Mode="In" />
+          <Parameter Name="Telefono2" Type="varchar" Mode="In" />
+          <Parameter Name="Correo" Type="varchar" Mode="In" />
+          <Parameter Name="id_Provincia" Type="int" Mode="In" />
+          <Parameter Name="id_Canton" Type="int" Mode="In" />
+          <Parameter Name="id_Distrito" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_ActualizaCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Carrera" Type="int" Mode="In" />
+          <Parameter Name="id_Grado" Type="int" Mode="In" />
+          <Parameter Name="Nombre" Type="varchar" Mode="In" />
+          <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_ActualizaCorreo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Envio" Type="int" Mode="In" />
+          <Parameter Name="Estado" Type="char" Mode="In" />
+          <Parameter Name="Bitacora" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_ActualizaGrados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Grado" Type="int" Mode="In" />
+          <Parameter Name="Nombre" Type="varchar" Mode="In" />
+          <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_ActualizaMateria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Materia" Type="int" Mode="In" />
+          <Parameter Name="Nombre" Type="varchar" Mode="In" />
+          <Parameter Name="Codigo" Type="varchar" Mode="In" />
+          <Parameter Name="Cant_Creditos" Type="int" Mode="In" />
+          <Parameter Name="Cant_Horas" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_ActualizaMateriaCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_CarreraOLD" Type="int" Mode="In" />
+          <Parameter Name="id_MateriaOLD" Type="int" Mode="In" />
+          <Parameter Name="id_CarreraNEW" Type="int" Mode="In" />
+          <Parameter Name="id_MateriaNEW" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_ActualizaMatricula" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Matricula" Type="int" Mode="In" />
+          <Parameter Name="id_Materia" Type="int" Mode="In" />
+          <Parameter Name="id_Alumno" Type="int" Mode="In" />
+          <Parameter Name="Nota" Type="int" Mode="In" />
+          <Parameter Name="id_Periodo" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_ActualizaPeriodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Periodo" Type="int" Mode="In" />
+          <Parameter Name="Codigo" Type="varchar" Mode="In" />
+          <Parameter Name="Fecha_Inicio" Type="date" Mode="In" />
+          <Parameter Name="Fecha_Fin" Type="date" Mode="In" />
+        </Function>
+        <Function Name="sp_ActualizaUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Usuario" Type="int" Mode="In" />
+          <Parameter Name="id_Alumno" Type="int" Mode="In" />
+          <Parameter Name="Usuario" Type="varchar" Mode="In" />
+          <Parameter Name="Contrasena" Type="varchar(max)" Mode="In" />
+          <Parameter Name="UltimaAccion" Type="datetime" Mode="In" />
+          <Parameter Name="Activo" Type="bit" Mode="In" />
+          <Parameter Name="EsAlumno" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="sp_EliminaAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Alumno" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_EliminaCanton" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Canton" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_EliminaCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Carrera" Type="int" Mode="In" />
+          <Parameter Name="id_Grado" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_EliminaGrados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Grado" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_EliminaMateria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Materia" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_EliminaMateriaCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Carrera" Type="int" Mode="In" />
+          <Parameter Name="id_Materia" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_EliminaMatricula" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Matricula" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_EliminaPeriodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Periodo" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_EliminaUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Usuario" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_InsertaAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Fecha_Ingreso" Type="date" Mode="In" />
+          <Parameter Name="Cedula" Type="varchar" Mode="In" />
+          <Parameter Name="Genero" Type="char" Mode="In" />
+          <Parameter Name="Fecha_Nacimiento" Type="date" Mode="In" />
+          <Parameter Name="Nombre" Type="varchar" Mode="In" />
+          <Parameter Name="Apellido1" Type="varchar" Mode="In" />
+          <Parameter Name="Apellido2" Type="varchar" Mode="In" />
+          <Parameter Name="Direccion" Type="varchar" Mode="In" />
+          <Parameter Name="Telefono1" Type="varchar" Mode="In" />
+          <Parameter Name="Telefono2" Type="varchar" Mode="In" />
+          <Parameter Name="Correo" Type="varchar" Mode="In" />
+          <Parameter Name="id_Provincia" Type="int" Mode="In" />
+          <Parameter Name="id_Canton" Type="int" Mode="In" />
+          <Parameter Name="id_Distrito" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_InsertaCanton" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Provincia" Type="int" Mode="In" />
+          <Parameter Name="nombre" Type="varchar" Mode="In" />
+          <Parameter Name="id_CantonInec" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_InsertaCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Grado" Type="int" Mode="In" />
+          <Parameter Name="Nombre" Type="varchar" Mode="In" />
+          <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_InsertaCorreo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Destinatario" Type="varchar" Mode="In" />
+          <Parameter Name="Asunto" Type="varchar" Mode="In" />
+          <Parameter Name="Cuerpo" Type="varchar" Mode="In" />
+          <Parameter Name="Estado" Type="char" Mode="In" />
+          <Parameter Name="Bitacora" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_InsertaGrados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Nombre" Type="varchar" Mode="In" />
+          <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_InsertaMateria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Nombre" Type="varchar" Mode="In" />
+          <Parameter Name="Codigo" Type="varchar" Mode="In" />
+          <Parameter Name="Cant_Creditos" Type="int" Mode="In" />
+          <Parameter Name="Cant_Horas" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_InsertaMateriaCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Carrera" Type="int" Mode="In" />
+          <Parameter Name="id_Materia" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_InsertaMatricula" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Materia" Type="int" Mode="In" />
+          <Parameter Name="id_Alumno" Type="int" Mode="In" />
+          <Parameter Name="Nota" Type="int" Mode="In" />
+          <Parameter Name="id_Periodo" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_InsertaPeriodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Codigo" Type="varchar" Mode="In" />
+          <Parameter Name="Fecha_Inicio" Type="date" Mode="In" />
+          <Parameter Name="Fecha_Fin" Type="date" Mode="In" />
+        </Function>
+        <Function Name="sp_InsertaUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Alumno" Type="int" Mode="In" />
+          <Parameter Name="Usuario" Type="varchar" Mode="In" />
+          <Parameter Name="Contrasena" Type="varchar(max)" Mode="In" />
+          <Parameter Name="UltimaAccion" Type="datetime" Mode="In" />
+          <Parameter Name="Activo" Type="bit" Mode="In" />
+          <Parameter Name="EsAlumno" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="sp_ModificaCanton" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Canton" Type="int" Mode="In" />
+          <Parameter Name="id_Provincia" Type="int" Mode="In" />
+          <Parameter Name="nombre" Type="varchar" Mode="In" />
+          <Parameter Name="id_CantonInec" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_ReporteMatriculaGen" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_ReporteMatriculaPorEstudiante" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="pLogin" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_ReprocesaCorreosError" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_RetornaAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_RetornaAlumnoData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="pLogin" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_RetornaAlumnoporID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Alumno" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_RetornaCantonPorProvincia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Provincia" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_RetornaCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_RetornaCarreraPorID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Carrera" Type="int" Mode="In" />
+          <Parameter Name="id_Grado" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_RetornaCorreosPendientes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_RetornaDistritoPorCanton" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Canton" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_RetornaGrados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_RetornaGradosPorID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Grado" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_RetornaInicioSesion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Usuario" Type="varchar" Mode="In" />
+          <Parameter Name="Contrasena" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_RetornaMateria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_RetornaMateriaPorID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Materia" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_RetornaMateriasAlumnoporID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Alumno" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_RetornaMateriasCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_RetornaMateriasCarreraPorCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Materia" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_RetornaMateriasCarreraPorMateria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Carrera" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_RetornaMateriasPeriodoporID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Periodo" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_RetornaMatricula" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_RetornaMatriculaporAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Alumno" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_RetornaPeriodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_RetornaPeriodoporID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Periodo" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_RetornaUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_RetornaUsuarioporID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Usuario" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="SistemaMatriculaModelStoreContainer">
+          <EntitySet Name="Alumno" EntityType="Self.Alumno" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Canton" EntityType="Self.Canton" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Carreras" EntityType="Self.Carreras" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Distrito" EntityType="Self.Distrito" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EnvioCorreos" EntityType="Self.EnvioCorreos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Grados" EntityType="Self.Grados" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Materias" EntityType="Self.Materias" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MateriasCarrera" EntityType="Self.MateriasCarrera" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Matricula" EntityType="Self.Matricula" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Periodos" EntityType="Self.Periodos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Provincia" EntityType="Self.Provincia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="Canton_ref_Provincia" Association="Self.Canton_ref_Provincia">
+            <End Role="Provincia" EntitySet="Provincia" />
+            <End Role="Canton" EntitySet="Canton" />
+          </AssociationSet>
+          <AssociationSet Name="Distrito_ref_Canton" Association="Self.Distrito_ref_Canton">
+            <End Role="Canton" EntitySet="Canton" />
+            <End Role="Distrito" EntitySet="Distrito" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Alumno__id_Canto__55009F39" Association="Self.FK__Alumno__id_Canto__55009F39">
+            <End Role="Canton" EntitySet="Canton" />
+            <End Role="Alumno" EntitySet="Alumno" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Alumno__id_Canto__6E01572D" Association="Self.FK__Alumno__id_Canto__6E01572D">
+            <End Role="Canton" EntitySet="Canton" />
+            <End Role="Alumno" EntitySet="Alumno" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Alumno__id_Distr__55F4C372" Association="Self.FK__Alumno__id_Distr__55F4C372">
+            <End Role="Distrito" EntitySet="Distrito" />
+            <End Role="Alumno" EntitySet="Alumno" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Alumno__id_Distr__6EF57B66" Association="Self.FK__Alumno__id_Distr__6EF57B66">
+            <End Role="Distrito" EntitySet="Distrito" />
+            <End Role="Alumno" EntitySet="Alumno" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Alumno__id_Provi__540C7B00" Association="Self.FK__Alumno__id_Provi__540C7B00">
+            <End Role="Provincia" EntitySet="Provincia" />
+            <End Role="Alumno" EntitySet="Alumno" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Alumno__id_Provi__6D0D32F4" Association="Self.FK__Alumno__id_Provi__6D0D32F4">
+            <End Role="Provincia" EntitySet="Provincia" />
+            <End Role="Alumno" EntitySet="Alumno" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Carreras__Descri__5AEE82B9" Association="Self.FK__Carreras__Descri__5AEE82B9">
+            <End Role="Grados" EntitySet="Grados" />
+            <End Role="Carreras" EntitySet="Carreras" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MateriasC__id_Ca__66603565" Association="Self.FK__MateriasC__id_Ca__66603565">
+            <End Role="Carreras" EntitySet="Carreras" />
+            <End Role="MateriasCarrera" EntitySet="MateriasCarrera" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MateriasC__id_Ma__6754599E" Association="Self.FK__MateriasC__id_Ma__6754599E">
+            <End Role="Materias" EntitySet="Materias" />
+            <End Role="MateriasCarrera" EntitySet="MateriasCarrera" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Matricula__id_Al__0B91BA14" Association="Self.FK__Matricula__id_Al__0B91BA14">
+            <End Role="Alumno" EntitySet="Alumno" />
+            <End Role="Matricula" EntitySet="Matricula" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Matricula__id_Ma__0A9D95DB" Association="Self.FK__Matricula__id_Ma__0A9D95DB">
+            <End Role="Materias" EntitySet="Materias" />
+            <End Role="Matricula" EntitySet="Matricula" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Matricula__id_Pe__0C85DE4D" Association="Self.FK__Matricula__id_Pe__0C85DE4D">
+            <End Role="Periodos" EntitySet="Periodos" />
+            <End Role="Matricula" EntitySet="Matricula" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Usuarios__id_Alu__797309D9" Association="Self.FK__Usuarios__id_Alu__797309D9">
+            <End Role="Alumno" EntitySet="Alumno" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SistemaMatriculaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Alumno">
+          <Key>
+            <PropertyRef Name="id_Alumno" />
+          </Key>
+          <Property Name="id_Alumno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Fecha_Ingreso" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Cedula" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Genero" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Fecha_Nacimiento" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Apellido1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Apellido2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Direccion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Telefono1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Telefono2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Correo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_Provincia" Type="Int32" Nullable="false" />
+          <Property Name="id_Canton" Type="Int32" Nullable="false" />
+          <Property Name="id_Distrito" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Canton" Relationship="Self.FK__Alumno__id_Canto__55009F39" FromRole="Alumno" ToRole="Canton" />
+          <NavigationProperty Name="Canton1" Relationship="Self.FK__Alumno__id_Canto__6E01572D" FromRole="Alumno" ToRole="Canton" />
+          <NavigationProperty Name="Distrito" Relationship="Self.FK__Alumno__id_Distr__55F4C372" FromRole="Alumno" ToRole="Distrito" />
+          <NavigationProperty Name="Distrito1" Relationship="Self.FK__Alumno__id_Distr__6EF57B66" FromRole="Alumno" ToRole="Distrito" />
+          <NavigationProperty Name="Provincia" Relationship="Self.FK__Alumno__id_Provi__540C7B00" FromRole="Alumno" ToRole="Provincia" />
+          <NavigationProperty Name="Provincia1" Relationship="Self.FK__Alumno__id_Provi__6D0D32F4" FromRole="Alumno" ToRole="Provincia" />
+          <NavigationProperty Name="Matriculas" Relationship="Self.FK__Matricula__id_Al__0B91BA14" FromRole="Alumno" ToRole="Matricula" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.FK__Usuarios__id_Alu__797309D9" FromRole="Alumno" ToRole="Usuarios" />
+        </EntityType>
+        <EntityType Name="Canton">
+          <Key>
+            <PropertyRef Name="id_Canton" />
+          </Key>
+          <Property Name="id_Canton" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_Provincia" Type="Int32" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCrea" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="fechaCrea" Type="DateTime" Precision="3" />
+          <Property Name="usuarioModifica" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="fechaModifica" Type="DateTime" Precision="3" />
+          <Property Name="vc_Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="id_CantonInec" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Alumnoes" Relationship="Self.FK__Alumno__id_Canto__55009F39" FromRole="Canton" ToRole="Alumno" />
+          <NavigationProperty Name="Alumnoes1" Relationship="Self.FK__Alumno__id_Canto__6E01572D" FromRole="Canton" ToRole="Alumno" />
+          <NavigationProperty Name="Provincia" Relationship="Self.Canton_ref_Provincia" FromRole="Canton" ToRole="Provincia" />
+          <NavigationProperty Name="Distritoes" Relationship="Self.Distrito_ref_Canton" FromRole="Canton" ToRole="Distrito" />
+        </EntityType>
+        <EntityType Name="Carrera">
+          <Key>
+            <PropertyRef Name="id_Carrera" />
+          </Key>
+          <Property Name="id_Carrera" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_Grado" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Grado" Relationship="Self.FK__Carreras__Descri__5AEE82B9" FromRole="Carreras" ToRole="Grados" />
+          <NavigationProperty Name="Materias" Relationship="Self.MateriasCarrera" FromRole="Carreras" ToRole="Materias" />
+        </EntityType>
+        <EntityType Name="Distrito">
+          <Key>
+            <PropertyRef Name="id_Distrito" />
+          </Key>
+          <Property Name="id_Distrito" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_Canton" Type="Int32" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCrea" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="fechaCrea" Type="DateTime" Precision="3" />
+          <Property Name="usuarioModifica" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="fechaModifica" Type="DateTime" Precision="3" />
+          <Property Name="vc_Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="id_DistritoInec" Type="Int32" />
+          <NavigationProperty Name="Alumnoes" Relationship="Self.FK__Alumno__id_Distr__55F4C372" FromRole="Distrito" ToRole="Alumno" />
+          <NavigationProperty Name="Alumnoes1" Relationship="Self.FK__Alumno__id_Distr__6EF57B66" FromRole="Distrito" ToRole="Alumno" />
+          <NavigationProperty Name="Canton" Relationship="Self.Distrito_ref_Canton" FromRole="Distrito" ToRole="Canton" />
+        </EntityType>
+        <EntityType Name="EnvioCorreo">
+          <Key>
+            <PropertyRef Name="id_Envio" />
+          </Key>
+          <Property Name="id_Envio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Destinatario" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Asunto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Cuerpo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Estado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Bitacora" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Grado">
+          <Key>
+            <PropertyRef Name="id_Grado" />
+          </Key>
+          <Property Name="id_Grado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Carreras" Relationship="Self.FK__Carreras__Descri__5AEE82B9" FromRole="Grados" ToRole="Carreras" />
+        </EntityType>
+        <EntityType Name="Materia">
+          <Key>
+            <PropertyRef Name="id_Materia" />
+          </Key>
+          <Property Name="id_Materia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Codigo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Cant_Creditos" Type="Int32" Nullable="false" />
+          <Property Name="Cant_Horas" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Matriculas" Relationship="Self.FK__Matricula__id_Ma__0A9D95DB" FromRole="Materias" ToRole="Matricula" />
+          <NavigationProperty Name="Carreras" Relationship="Self.MateriasCarrera" FromRole="Materias" ToRole="Carreras" />
+        </EntityType>
+        <EntityType Name="Matricula">
+          <Key>
+            <PropertyRef Name="id_Matricula" />
+          </Key>
+          <Property Name="id_Matricula" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_Materia" Type="Int32" Nullable="false" />
+          <Property Name="id_Alumno" Type="Int32" Nullable="false" />
+          <Property Name="Nota" Type="Int32" Nullable="false" />
+          <Property Name="id_Periodo" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Alumno" Relationship="Self.FK__Matricula__id_Al__0B91BA14" FromRole="Matricula" ToRole="Alumno" />
+          <NavigationProperty Name="Materia" Relationship="Self.FK__Matricula__id_Ma__0A9D95DB" FromRole="Matricula" ToRole="Materias" />
+          <NavigationProperty Name="Periodo" Relationship="Self.FK__Matricula__id_Pe__0C85DE4D" FromRole="Matricula" ToRole="Periodos" />
+        </EntityType>
+        <EntityType Name="Periodo">
+          <Key>
+            <PropertyRef Name="id_Periodo" />
+          </Key>
+          <Property Name="id_Periodo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Codigo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Fecha_Inicio" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Fecha_Fin" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Matriculas" Relationship="Self.FK__Matricula__id_Pe__0C85DE4D" FromRole="Periodos" ToRole="Matricula" />
+        </EntityType>
+        <EntityType Name="Provincia">
+          <Key>
+            <PropertyRef Name="id_Provincia" />
+          </Key>
+          <Property Name="id_Provincia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="usuarioCrea" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="fechaCrea" Type="DateTime" Precision="3" />
+          <Property Name="usuarioModifica" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="fechaModifica" Type="DateTime" Precision="3" />
+          <Property Name="vc_Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Alumnoes" Relationship="Self.FK__Alumno__id_Provi__540C7B00" FromRole="Provincia" ToRole="Alumno" />
+          <NavigationProperty Name="Alumnoes1" Relationship="Self.FK__Alumno__id_Provi__6D0D32F4" FromRole="Provincia" ToRole="Alumno" />
+          <NavigationProperty Name="Cantons" Relationship="Self.Canton_ref_Provincia" FromRole="Provincia" ToRole="Canton" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="id_Usuario" />
+          </Key>
+          <Property Name="id_Usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_Alumno" Type="Int32" />
+          <Property Name="Usuario1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Contrasena" Type="Binary" MaxLength="64" FixedLength="true" Nullable="false" />
+          <Property Name="UltimaAccion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Activo" Type="Boolean" Nullable="false" />
+          <Property Name="EsAlumno" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Alumno" Relationship="Self.FK__Usuarios__id_Alu__797309D9" FromRole="Usuarios" ToRole="Alumno" />
+        </EntityType>
+        <Association Name="FK__Alumno__id_Canto__55009F39">
+          <End Role="Canton" Type="Self.Canton" Multiplicity="1" />
+          <End Role="Alumno" Type="Self.Alumno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Canton">
+              <PropertyRef Name="id_Canton" />
+            </Principal>
+            <Dependent Role="Alumno">
+              <PropertyRef Name="id_Canton" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Alumno__id_Canto__6E01572D">
+          <End Role="Canton" Type="Self.Canton" Multiplicity="1" />
+          <End Role="Alumno" Type="Self.Alumno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Canton">
+              <PropertyRef Name="id_Canton" />
+            </Principal>
+            <Dependent Role="Alumno">
+              <PropertyRef Name="id_Canton" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Alumno__id_Distr__55F4C372">
+          <End Role="Distrito" Type="Self.Distrito" Multiplicity="1" />
+          <End Role="Alumno" Type="Self.Alumno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Distrito">
+              <PropertyRef Name="id_Distrito" />
+            </Principal>
+            <Dependent Role="Alumno">
+              <PropertyRef Name="id_Distrito" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Alumno__id_Distr__6EF57B66">
+          <End Role="Distrito" Type="Self.Distrito" Multiplicity="1" />
+          <End Role="Alumno" Type="Self.Alumno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Distrito">
+              <PropertyRef Name="id_Distrito" />
+            </Principal>
+            <Dependent Role="Alumno">
+              <PropertyRef Name="id_Distrito" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Alumno__id_Provi__540C7B00">
+          <End Role="Provincia" Type="Self.Provincia" Multiplicity="1" />
+          <End Role="Alumno" Type="Self.Alumno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provincia">
+              <PropertyRef Name="id_Provincia" />
+            </Principal>
+            <Dependent Role="Alumno">
+              <PropertyRef Name="id_Provincia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Alumno__id_Provi__6D0D32F4">
+          <End Role="Provincia" Type="Self.Provincia" Multiplicity="1" />
+          <End Role="Alumno" Type="Self.Alumno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provincia">
+              <PropertyRef Name="id_Provincia" />
+            </Principal>
+            <Dependent Role="Alumno">
+              <PropertyRef Name="id_Provincia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Matricula__id_Al__0B91BA14">
+          <End Role="Alumno" Type="Self.Alumno" Multiplicity="1" />
+          <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Alumno">
+              <PropertyRef Name="id_Alumno" />
+            </Principal>
+            <Dependent Role="Matricula">
+              <PropertyRef Name="id_Alumno" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Usuarios__id_Alu__797309D9">
+          <End Role="Alumno" Type="Self.Alumno" Multiplicity="0..1" />
+          <End Role="Usuarios" Type="Self.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Alumno">
+              <PropertyRef Name="id_Alumno" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="id_Alumno" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Canton_ref_Provincia">
+          <End Role="Provincia" Type="Self.Provincia" Multiplicity="1" />
+          <End Role="Canton" Type="Self.Canton" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provincia">
+              <PropertyRef Name="id_Provincia" />
+            </Principal>
+            <Dependent Role="Canton">
+              <PropertyRef Name="id_Provincia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Distrito_ref_Canton">
+          <End Role="Canton" Type="Self.Canton" Multiplicity="0..1" />
+          <End Role="Distrito" Type="Self.Distrito" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Canton">
+              <PropertyRef Name="id_Canton" />
+            </Principal>
+            <Dependent Role="Distrito">
+              <PropertyRef Name="id_Canton" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Carreras__Descri__5AEE82B9">
+          <End Role="Grados" Type="Self.Grado" Multiplicity="1" />
+          <End Role="Carreras" Type="Self.Carrera" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grados">
+              <PropertyRef Name="id_Grado" />
+            </Principal>
+            <Dependent Role="Carreras">
+              <PropertyRef Name="id_Grado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Matricula__id_Ma__0A9D95DB">
+          <End Role="Materias" Type="Self.Materia" Multiplicity="1" />
+          <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Materias">
+              <PropertyRef Name="id_Materia" />
+            </Principal>
+            <Dependent Role="Matricula">
+              <PropertyRef Name="id_Materia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Matricula__id_Pe__0C85DE4D">
+          <End Role="Periodos" Type="Self.Periodo" Multiplicity="1" />
+          <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Periodos">
+              <PropertyRef Name="id_Periodo" />
+            </Principal>
+            <Dependent Role="Matricula">
+              <PropertyRef Name="id_Periodo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MateriasCarrera">
+          <End Role="Carreras" Type="Self.Carrera" Multiplicity="*" />
+          <End Role="Materias" Type="Self.Materia" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="SistemaMatriculaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Alumnoes" EntityType="Self.Alumno" />
+          <EntitySet Name="Cantons" EntityType="Self.Canton" />
+          <EntitySet Name="Carreras" EntityType="Self.Carrera" />
+          <EntitySet Name="Distritoes" EntityType="Self.Distrito" />
+          <EntitySet Name="EnvioCorreos" EntityType="Self.EnvioCorreo" />
+          <EntitySet Name="Grados" EntityType="Self.Grado" />
+          <EntitySet Name="Materias" EntityType="Self.Materia" />
+          <EntitySet Name="Matriculas" EntityType="Self.Matricula" />
+          <EntitySet Name="Periodos" EntityType="Self.Periodo" />
+          <EntitySet Name="Provincias" EntityType="Self.Provincia" />
+          <EntitySet Name="Usuarios" EntityType="Self.Usuario" />
+          <AssociationSet Name="FK__Alumno__id_Canto__55009F39" Association="Self.FK__Alumno__id_Canto__55009F39">
+            <End Role="Canton" EntitySet="Cantons" />
+            <End Role="Alumno" EntitySet="Alumnoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Alumno__id_Canto__6E01572D" Association="Self.FK__Alumno__id_Canto__6E01572D">
+            <End Role="Canton" EntitySet="Cantons" />
+            <End Role="Alumno" EntitySet="Alumnoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Alumno__id_Distr__55F4C372" Association="Self.FK__Alumno__id_Distr__55F4C372">
+            <End Role="Distrito" EntitySet="Distritoes" />
+            <End Role="Alumno" EntitySet="Alumnoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Alumno__id_Distr__6EF57B66" Association="Self.FK__Alumno__id_Distr__6EF57B66">
+            <End Role="Distrito" EntitySet="Distritoes" />
+            <End Role="Alumno" EntitySet="Alumnoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Alumno__id_Provi__540C7B00" Association="Self.FK__Alumno__id_Provi__540C7B00">
+            <End Role="Provincia" EntitySet="Provincias" />
+            <End Role="Alumno" EntitySet="Alumnoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Alumno__id_Provi__6D0D32F4" Association="Self.FK__Alumno__id_Provi__6D0D32F4">
+            <End Role="Provincia" EntitySet="Provincias" />
+            <End Role="Alumno" EntitySet="Alumnoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Matricula__id_Al__0B91BA14" Association="Self.FK__Matricula__id_Al__0B91BA14">
+            <End Role="Alumno" EntitySet="Alumnoes" />
+            <End Role="Matricula" EntitySet="Matriculas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Usuarios__id_Alu__797309D9" Association="Self.FK__Usuarios__id_Alu__797309D9">
+            <End Role="Alumno" EntitySet="Alumnoes" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="Canton_ref_Provincia" Association="Self.Canton_ref_Provincia">
+            <End Role="Provincia" EntitySet="Provincias" />
+            <End Role="Canton" EntitySet="Cantons" />
+          </AssociationSet>
+          <AssociationSet Name="Distrito_ref_Canton" Association="Self.Distrito_ref_Canton">
+            <End Role="Canton" EntitySet="Cantons" />
+            <End Role="Distrito" EntitySet="Distritoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Carreras__Descri__5AEE82B9" Association="Self.FK__Carreras__Descri__5AEE82B9">
+            <End Role="Grados" EntitySet="Grados" />
+            <End Role="Carreras" EntitySet="Carreras" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Matricula__id_Ma__0A9D95DB" Association="Self.FK__Matricula__id_Ma__0A9D95DB">
+            <End Role="Materias" EntitySet="Materias" />
+            <End Role="Matricula" EntitySet="Matriculas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Matricula__id_Pe__0C85DE4D" Association="Self.FK__Matricula__id_Pe__0C85DE4D">
+            <End Role="Periodos" EntitySet="Periodos" />
+            <End Role="Matricula" EntitySet="Matriculas" />
+          </AssociationSet>
+          <AssociationSet Name="MateriasCarrera" Association="Self.MateriasCarrera">
+            <End Role="Carreras" EntitySet="Carreras" />
+            <End Role="Materias" EntitySet="Materias" />
+          </AssociationSet>
+          <FunctionImport Name="RetornaCantones" ReturnType="Collection(SistemaMatriculaModel.RetornaCantones_Result)">
+            <Parameter Name="nombre" Mode="In" Type="String" />
+            <Parameter Name="id_Provincia" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="RetornaCantonesID" ReturnType="Collection(SistemaMatriculaModel.RetornaCantonesID_Result)">
+          <Parameter Name="id_Canton" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="RetornaProvincias" ReturnType="Collection(SistemaMatriculaModel.RetornaProvincias_Result)">
+          </FunctionImport>
+          <FunctionImport Name="sp_ActualizaAlumno">
+            <Parameter Name="id_Alumno" Mode="In" Type="Int32" />
+            <Parameter Name="Fecha_Ingreso" Mode="In" Type="DateTime" />
+            <Parameter Name="Cedula" Mode="In" Type="String" />
+            <Parameter Name="Genero" Mode="In" Type="String" />
+            <Parameter Name="Fecha_Nacimiento" Mode="In" Type="DateTime" />
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Apellido1" Mode="In" Type="String" />
+            <Parameter Name="Apellido2" Mode="In" Type="String" />
+            <Parameter Name="Direccion" Mode="In" Type="String" />
+            <Parameter Name="Telefono1" Mode="In" Type="String" />
+            <Parameter Name="Telefono2" Mode="In" Type="String" />
+            <Parameter Name="Correo" Mode="In" Type="String" />
+            <Parameter Name="id_Provincia" Mode="In" Type="Int32" />
+            <Parameter Name="id_Canton" Mode="In" Type="Int32" />
+            <Parameter Name="id_Distrito" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ActualizaCarrera">
+            <Parameter Name="id_Carrera" Mode="In" Type="Int32" />
+            <Parameter Name="id_Grado" Mode="In" Type="Int32" />
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Descripcion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ActualizaCorreo">
+            <Parameter Name="id_Envio" Mode="In" Type="Int32" />
+            <Parameter Name="Estado" Mode="In" Type="String" />
+            <Parameter Name="Bitacora" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ActualizaGrados">
+            <Parameter Name="id_Grado" Mode="In" Type="Int32" />
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Descripcion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ActualizaMateria">
+            <Parameter Name="id_Materia" Mode="In" Type="Int32" />
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Codigo" Mode="In" Type="String" />
+            <Parameter Name="Cant_Creditos" Mode="In" Type="Int32" />
+            <Parameter Name="Cant_Horas" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ActualizaMateriaCarrera">
+            <Parameter Name="id_CarreraOLD" Mode="In" Type="Int32" />
+            <Parameter Name="id_MateriaOLD" Mode="In" Type="Int32" />
+            <Parameter Name="id_CarreraNEW" Mode="In" Type="Int32" />
+            <Parameter Name="id_MateriaNEW" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ActualizaMatricula">
+            <Parameter Name="id_Matricula" Mode="In" Type="Int32" />
+            <Parameter Name="id_Materia" Mode="In" Type="Int32" />
+            <Parameter Name="id_Alumno" Mode="In" Type="Int32" />
+            <Parameter Name="Nota" Mode="In" Type="Int32" />
+            <Parameter Name="id_Periodo" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ActualizaPeriodo">
+            <Parameter Name="id_Periodo" Mode="In" Type="Int32" />
+            <Parameter Name="Codigo" Mode="In" Type="String" />
+            <Parameter Name="Fecha_Inicio" Mode="In" Type="DateTime" />
+            <Parameter Name="Fecha_Fin" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ActualizaUsuario">
+            <Parameter Name="id_Usuario" Mode="In" Type="Int32" />
+            <Parameter Name="id_Alumno" Mode="In" Type="Int32" />
+            <Parameter Name="Usuario" Mode="In" Type="String" />
+            <Parameter Name="Contrasena" Mode="In" Type="String" />
+            <Parameter Name="UltimaAccion" Mode="In" Type="DateTime" />
+            <Parameter Name="Activo" Mode="In" Type="Boolean" />
+            <Parameter Name="EsAlumno" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="sp_EliminaAlumno">
+          <Parameter Name="id_Alumno" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_EliminaCanton">
+          <Parameter Name="id_Canton" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_EliminaCarrera">
+            <Parameter Name="id_Carrera" Mode="In" Type="Int32" />
+            <Parameter Name="id_Grado" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_EliminaGrados">
+          <Parameter Name="id_Grado" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_EliminaMateria">
+          <Parameter Name="id_Materia" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_EliminaMateriaCarrera">
+            <Parameter Name="id_Carrera" Mode="In" Type="Int32" />
+            <Parameter Name="id_Materia" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_EliminaMatricula">
+          <Parameter Name="id_Matricula" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_EliminaPeriodo">
+          <Parameter Name="id_Periodo" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_EliminaUsuario">
+          <Parameter Name="id_Usuario" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_InsertaAlumno">
+            <Parameter Name="Fecha_Ingreso" Mode="In" Type="DateTime" />
+            <Parameter Name="Cedula" Mode="In" Type="String" />
+            <Parameter Name="Genero" Mode="In" Type="String" />
+            <Parameter Name="Fecha_Nacimiento" Mode="In" Type="DateTime" />
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Apellido1" Mode="In" Type="String" />
+            <Parameter Name="Apellido2" Mode="In" Type="String" />
+            <Parameter Name="Direccion" Mode="In" Type="String" />
+            <Parameter Name="Telefono1" Mode="In" Type="String" />
+            <Parameter Name="Telefono2" Mode="In" Type="String" />
+            <Parameter Name="Correo" Mode="In" Type="String" />
+            <Parameter Name="id_Provincia" Mode="In" Type="Int32" />
+            <Parameter Name="id_Canton" Mode="In" Type="Int32" />
+            <Parameter Name="id_Distrito" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_InsertaCanton">
+            <Parameter Name="id_Provincia" Mode="In" Type="Int32" />
+            <Parameter Name="nombre" Mode="In" Type="String" />
+            <Parameter Name="id_CantonInec" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_InsertaCarrera">
+            <Parameter Name="id_Grado" Mode="In" Type="Int32" />
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Descripcion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_InsertaCorreo">
+            <Parameter Name="Destinatario" Mode="In" Type="String" />
+            <Parameter Name="Asunto" Mode="In" Type="String" />
+            <Parameter Name="Cuerpo" Mode="In" Type="String" />
+            <Parameter Name="Estado" Mode="In" Type="String" />
+            <Parameter Name="Bitacora" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_InsertaGrados">
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Descripcion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_InsertaMateria">
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Codigo" Mode="In" Type="String" />
+            <Parameter Name="Cant_Creditos" Mode="In" Type="Int32" />
+            <Parameter Name="Cant_Horas" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_InsertaMateriaCarrera">
+            <Parameter Name="id_Carrera" Mode="In" Type="Int32" />
+            <Parameter Name="id_Materia" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_InsertaMatricula">
+            <Parameter Name="id_Materia" Mode="In" Type="Int32" />
+            <Parameter Name="id_Alumno" Mode="In" Type="Int32" />
+            <Parameter Name="Nota" Mode="In" Type="Int32" />
+            <Parameter Name="id_Periodo" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_InsertaPeriodo">
+            <Parameter Name="Codigo" Mode="In" Type="String" />
+            <Parameter Name="Fecha_Inicio" Mode="In" Type="DateTime" />
+            <Parameter Name="Fecha_Fin" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_InsertaUsuario">
+            <Parameter Name="id_Alumno" Mode="In" Type="Int32" />
+            <Parameter Name="Usuario" Mode="In" Type="String" />
+            <Parameter Name="Contrasena" Mode="In" Type="String" />
+            <Parameter Name="UltimaAccion" Mode="In" Type="DateTime" />
+            <Parameter Name="Activo" Mode="In" Type="Boolean" />
+            <Parameter Name="EsAlumno" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ModificaCanton">
+            <Parameter Name="id_Canton" Mode="In" Type="Int32" />
+            <Parameter Name="id_Provincia" Mode="In" Type="Int32" />
+            <Parameter Name="nombre" Mode="In" Type="String" />
+            <Parameter Name="id_CantonInec" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ReprocesaCorreosError" />
+          <FunctionImport Name="sp_RetornaAlumno" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaAlumno_Result)" />
+          <FunctionImport Name="sp_RetornaAlumnoporID" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaAlumnoporID_Result)">
+          <Parameter Name="id_Alumno" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RetornaCarrera" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaCarrera_Result)" />
+          <FunctionImport Name="sp_RetornaCarreraPorID" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaCarreraPorID_Result)">
+            <Parameter Name="id_Carrera" Mode="In" Type="Int32" />
+            <Parameter Name="id_Grado" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RetornaCorreosPendientes" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaCorreosPendientes_Result)" />
+          <FunctionImport Name="sp_RetornaGrados" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaGrados_Result)" />
+          <FunctionImport Name="sp_RetornaGradosPorID" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaGradosPorID_Result)">
+          <Parameter Name="id_Grado" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RetornaInicioSesion" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaInicioSesion_Result)">
+            <Parameter Name="Usuario" Mode="In" Type="String" />
+            <Parameter Name="Contrasena" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RetornaMateria" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaMateria_Result)" />
+          <FunctionImport Name="sp_RetornaMateriaPorID" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaMateriaPorID_Result)">
+          <Parameter Name="id_Materia" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RetornaMateriasAlumnoporID" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaMateriasAlumnoporID_Result)">
+          <Parameter Name="id_Alumno" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RetornaMateriasCarrera" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaMateriasCarrera_Result)" />
+          <FunctionImport Name="sp_RetornaMateriasCarreraPorCarrera" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaMateriasCarreraPorCarrera_Result)">
+          <Parameter Name="id_Materia" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RetornaMateriasCarreraPorMateria" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaMateriasCarreraPorMateria_Result)">
+          <Parameter Name="id_Carrera" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RetornaMateriasPeriodoporID" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaMateriasPeriodoporID_Result)">
+          <Parameter Name="id_Periodo" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RetornaMatricula" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaMatricula_Result)" />
+          <FunctionImport Name="sp_RetornaMatriculaporAlumno" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaMatriculaporAlumno_Result)">
+          <Parameter Name="id_Alumno" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RetornaPeriodo" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaPeriodo_Result)" />
+          <FunctionImport Name="sp_RetornaUsuario" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaUsuario_Result)" />
+          <FunctionImport Name="sp_RetornaUsuarioporID" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaUsuarioporID_Result)">
+          <Parameter Name="id_Usuario" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="RetornaMateriasPorCarreraPorId" ReturnType="Collection(SistemaMatriculaModel.RetornaMateriasPorCarreraPorId_Result)">
+            <Parameter Name="id_Carrera" Mode="In" Type="Int32" />
+            <Parameter Name="id_Materia" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RetornaMateriaPorCarreraPorId" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaMateriaPorCarreraPorId_Result)">
+            <Parameter Name="id_Carrera" Mode="In" Type="Int32" />
+            <Parameter Name="id_Materia" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RetornaPeriodoporID" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaPeriodoporID_Result)">
+          <Parameter Name="id_Periodo" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RetornaCantonPorProvincia" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaCantonPorProvincia_Result)">
+          <Parameter Name="id_Provincia" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RetornaDistritoPorCanton" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaDistritoPorCanton_Result)">
+          <Parameter Name="id_Canton" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_RetornaAlumnoData" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaAlumnoData_Result)">
+          <Parameter Name="pLogin" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ReporteMatriculaGen" ReturnType="Collection(SistemaMatriculaModel.sp_ReporteMatriculaGen_Result)" />
+          <FunctionImport Name="sp_ReporteMatriculaPorEstudiante" ReturnType="Collection(SistemaMatriculaModel.sp_ReporteMatriculaPorEstudiante_Result)">
+          <Parameter Name="pLogin" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="RetornaCantones_Result">
+          <Property Type="Int32" Name="id_Canton" Nullable="false" />
+          <Property Type="Int32" Name="id_Provincia" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Provincia" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="usuarioCrea" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="fechaCrea" Nullable="true" Precision="23" />
+          <Property Type="String" Name="usuarioModifica" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="fechaModifica" Nullable="true" Precision="23" />
+          <Property Type="String" Name="vc_Estado" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="id_CantonInec" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="RetornaCantonesID_Result">
+          <Property Type="Int32" Name="id_Canton" Nullable="false" />
+          <Property Type="Int32" Name="id_Provincia" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Provincia" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="usuarioCrea" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="fechaCrea" Nullable="true" Precision="23" />
+          <Property Type="String" Name="usuarioModifica" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="fechaModifica" Nullable="true" Precision="23" />
+          <Property Type="String" Name="vc_Estado" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="id_CantonInec" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="RetornaProvincias_Result">
+          <Property Type="Int32" Name="id_Provincia" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="usuarioCrea" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="fechaCrea" Nullable="true" Precision="23" />
+          <Property Type="String" Name="usuarioModifica" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="fechaModifica" Nullable="true" Precision="23" />
+          <Property Type="String" Name="vc_Estado" Nullable="true" MaxLength="3" />
+        </ComplexType>
+        <ComplexType Name="sp_RetornaAlumno_Result">
+          <Property Type="Int32" Name="id_Alumno" Nullable="false" />
+          <Property Type="DateTime" Name="Fecha_Ingreso" Nullable="false" />
+          <Property Type="String" Name="Cedula" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="Genero" Nullable="false" MaxLength="1" />
+          <Property Type="DateTime" Name="Fecha_Nacimiento" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Apellido1" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Apellido2" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Direccion" Nullable="false" MaxLength="500" />
+          <Property Type="String" Name="Telefono1" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Telefono2" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Correo" Nullable="false" MaxLength="30" />
+          <Property Type="Int32" Name="id_Provincia" Nullable="false" />
+          <Property Type="Int32" Name="id_Canton" Nullable="false" />
+          <Property Type="Int32" Name="id_Distrito" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_RetornaAlumnoporID_Result">
+          <Property Type="Int32" Name="id_Alumno" Nullable="false" />
+          <Property Type="DateTime" Name="Fecha_Ingreso" Nullable="false" />
+          <Property Type="String" Name="Cedula" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="Genero" Nullable="false" MaxLength="1" />
+          <Property Type="DateTime" Name="Fecha_Nacimiento" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Apellido1" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Apellido2" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Direccion" Nullable="false" MaxLength="500" />
+          <Property Type="String" Name="Telefono1" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Telefono2" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Correo" Nullable="false" MaxLength="30" />
+          <Property Type="Int32" Name="id_Provincia" Nullable="false" />
+          <Property Type="Int32" Name="id_Canton" Nullable="false" />
+          <Property Type="Int32" Name="id_Distrito" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_RetornaCarrera_Result">
+          <Property Type="Int32" Name="id_Carrera" Nullable="false" />
+          <Property Type="Int32" Name="id_Grado" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="500" />
+        </ComplexType>
+        <ComplexType Name="sp_RetornaCarreraPorID_Result">
+          <Property Type="Int32" Name="id_Carrera" Nullable="false" />
+          <Property Type="Int32" Name="id_Grado" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="500" />
+        </ComplexType>
+        <ComplexType Name="sp_RetornaCorreosPendientes_Result">
+          <Property Type="Int32" Name="id_Envio" Nullable="false" />
+          <Property Type="String" Name="Destinatario" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="Asunto" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Cuerpo" Nullable="false" MaxLength="500" />
+          <Property Type="String" Name="Estado" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Bitacora" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_RetornaGrados_Result">
+          <Property Type="Int32" Name="id_Grado" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="500" />
+        </ComplexType>
+        <ComplexType Name="sp_RetornaGradosPorID_Result">
+          <Property Type="Int32" Name="id_Grado" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="500" />
+        </ComplexType>
+        <ComplexType Name="sp_RetornaInicioSesion_Result">
+          <Property Type="String" Name="Usuario" Nullable="false" MaxLength="30" />
+          <Property Type="Boolean" Name="Activo" Nullable="false" />
+          <Property Type="Boolean" Name="EsAlumno" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_RetornaMateria_Result">
+          <Property Type="Int32" Name="id_Materia" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Codigo" Nullable="false" MaxLength="10" />
+          <Property Type="Int32" Name="Cant_Creditos" Nullable="false" />
+          <Property Type="Int32" Name="Cant_Horas" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_RetornaMateriaPorID_Result">
+          <Property Type="Int32" Name="id_Materia" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Codigo" Nullable="false" MaxLength="10" />
+          <Property Type="Int32" Name="Cant_Creditos" Nullable="false" />
+          <Property Type="Int32" Name="Cant_Horas" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_RetornaMateriasAlumnoporID_Result">
+          <Property Type="Int32" Name="id_Alumno" Nullable="false" />
+          <Property Type="DateTime" Name="Fecha_Ingreso" Nullable="false" />
+          <Property Type="String" Name="Cedula" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="Genero" Nullable="false" MaxLength="1" />
+          <Property Type="DateTime" Name="Fecha_Nacimiento" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Apellido1" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Apellido2" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Direccion" Nullable="false" MaxLength="500" />
+          <Property Type="String" Name="Telefono1" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Telefono2" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Correo" Nullable="false" MaxLength="30" />
+          <Property Type="Int32" Name="id_Provincia" Nullable="false" />
+          <Property Type="Int32" Name="id_Canton" Nullable="false" />
+          <Property Type="Int32" Name="id_Distrito" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_RetornaMateriasCarrera_Result">
+          <Property Type="Int32" Name="id_Carrera" Nullable="false" />
+          <Property Type="Int32" Name="id_Materia" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_RetornaMateriasCarreraPorCarrera_Result">
+          <Property Type="Int32" Name="id_Carrera" Nullable="false" />
+          <Property Type="Int32" Name="id_Materia" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_RetornaMateriasCarreraPorMateria_Result">
+          <Property Type="Int32" Name="id_Carrera" Nullable="false" />
+          <Property Type="Int32" Name="id_Materia" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_RetornaMateriasPeriodoporID_Result">
+          <Property Type="Int32" Name="id_Periodo" Nullable="false" />
+          <Property Type="String" Name="Codigo" Nullable="false" MaxLength="10" />
+          <Property Type="DateTime" Name="Fecha_Inicio" Nullable="false" />
+          <Property Type="DateTime" Name="Fecha_Fin" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_RetornaMatricula_Result">
+          <Property Type="Int32" Name="id_Matricula" Nullable="false" />
+          <Property Type="Int32" Name="id_Materia" Nullable="false" />
+          <Property Type="Int32" Name="id_Alumno" Nullable="false" />
+          <Property Type="Int32" Name="Nota" Nullable="false" />
+          <Property Type="Int32" Name="id_Periodo" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_RetornaMatriculaporAlumno_Result">
+          <Property Type="Int32" Name="id_Matricula" Nullable="false" />
+          <Property Type="Int32" Name="id_Materia" Nullable="false" />
+          <Property Type="Int32" Name="id_Alumno" Nullable="false" />
+          <Property Type="Int32" Name="Nota" Nullable="false" />
+          <Property Type="Int32" Name="id_Periodo" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_RetornaPeriodo_Result">
+          <Property Type="Int32" Name="id_Periodo" Nullable="false" />
+          <Property Type="String" Name="Codigo" Nullable="false" MaxLength="10" />
+          <Property Type="DateTime" Name="Fecha_Inicio" Nullable="false" />
+          <Property Type="DateTime" Name="Fecha_Fin" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_RetornaUsuario_Result">
+          <Property Type="Int32" Name="id_Usuario" Nullable="false" />
+          <Property Type="Int32" Name="id_Alumno" Nullable="true" />
+          <Property Type="String" Name="Usuario" Nullable="false" MaxLength="30" />
+          <Property Type="Binary" Name="Contrasena" Nullable="false" MaxLength="64" />
+          <Property Type="DateTime" Name="UltimaAccion" Nullable="false" Precision="23" />
+          <Property Type="Boolean" Name="Activo" Nullable="false" />
+          <Property Type="Boolean" Name="EsAlumno" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_RetornaUsuarioporID_Result">
+          <Property Type="Int32" Name="id_Usuario" Nullable="false" />
+          <Property Type="Int32" Name="id_Alumno" Nullable="true" />
+          <Property Type="String" Name="Usuario" Nullable="false" MaxLength="30" />
+          <Property Type="Binary" Name="Contrasena" Nullable="false" MaxLength="64" />
+          <Property Type="DateTime" Name="UltimaAccion" Nullable="false" Precision="23" />
+          <Property Type="Boolean" Name="Activo" Nullable="false" />
+          <Property Type="Boolean" Name="EsAlumno" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="RetornaMateriasPorCarreraPorId_Result">
+          <Property Type="Int32" Name="id_Materia" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_RetornaMateriaPorCarreraPorId_Result">
+          <Property Type="Int32" Name="id_Materia" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_RetornaPeriodoporID_Result">
+          <Property Type="Int32" Name="id_Periodo" Nullable="false" />
+          <Property Type="String" Name="Codigo" Nullable="false" MaxLength="10" />
+          <Property Type="DateTime" Name="Fecha_Inicio" Nullable="false" />
+          <Property Type="DateTime" Name="Fecha_Fin" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_RetornaCantonPorProvincia_Result">
+          <Property Type="Int32" Name="id_Canton" Nullable="false" />
+          <Property Type="Int32" Name="id_Provincia" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="usuarioCrea" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="fechaCrea" Nullable="true" Precision="23" />
+          <Property Type="String" Name="usuarioModifica" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="fechaModifica" Nullable="true" Precision="23" />
+          <Property Type="String" Name="vc_Estado" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="id_CantonInec" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_RetornaDistritoPorCanton_Result">
+          <Property Type="Int32" Name="id_Distrito" Nullable="false" />
+          <Property Type="Int32" Name="id_Canton" Nullable="true" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="usuarioCrea" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="fechaCrea" Nullable="true" Precision="23" />
+          <Property Type="String" Name="usuarioModifica" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="fechaModifica" Nullable="true" Precision="23" />
+          <Property Type="String" Name="vc_Estado" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="id_DistritoInec" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_RetornaAlumnoData_Result">
+          <Property Type="Int32" Name="id_Alumno" Nullable="false" />
+          <Property Type="DateTime" Name="Fecha_Ingreso" Nullable="false" />
+          <Property Type="String" Name="Cedula" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="Genero" Nullable="false" MaxLength="1" />
+          <Property Type="DateTime" Name="Fecha_Nacimiento" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Apellido1" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Apellido2" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Direccion" Nullable="false" MaxLength="500" />
+          <Property Type="String" Name="Telefono1" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Telefono2" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Correo" Nullable="false" MaxLength="30" />
+          <Property Type="Int32" Name="id_Provincia" Nullable="false" />
+          <Property Type="Int32" Name="id_Canton" Nullable="false" />
+          <Property Type="Int32" Name="id_Distrito" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_ReporteMatriculaGen_Result">
+          <Property Type="Int32" Name="id_Matricula" Nullable="false" />
+          <Property Type="String" Name="Materia" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Codigo" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="NombreEst" Nullable="false" MaxLength="62" />
+          <Property Type="Int32" Name="Nota" Nullable="false" />
+          <Property Type="String" Name="Estado" Nullable="false" MaxLength="9" />
+        </ComplexType>
+        <ComplexType Name="sp_ReporteMatriculaPorEstudiante_Result">
+          <Property Type="Int32" Name="id_Matricula" Nullable="false" />
+          <Property Type="String" Name="Materia" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Codigo" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="NombreEst" Nullable="false" MaxLength="62" />
+          <Property Type="Int32" Name="Nota" Nullable="false" />
+          <Property Type="String" Name="Estado" Nullable="false" MaxLength="9" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SistemaMatriculaModelStoreContainer" CdmEntityContainer="SistemaMatriculaEntities">
+          <EntitySetMapping Name="Alumnoes">
+            <EntityTypeMapping TypeName="SistemaMatriculaModel.Alumno">
+              <MappingFragment StoreEntitySet="Alumno">
+                <ScalarProperty Name="id_Alumno" ColumnName="id_Alumno" />
+                <ScalarProperty Name="Fecha_Ingreso" ColumnName="Fecha_Ingreso" />
+                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="Fecha_Nacimiento" ColumnName="Fecha_Nacimiento" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+                <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Telefono1" ColumnName="Telefono1" />
+                <ScalarProperty Name="Telefono2" ColumnName="Telefono2" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="id_Provincia" ColumnName="id_Provincia" />
+                <ScalarProperty Name="id_Canton" ColumnName="id_Canton" />
+                <ScalarProperty Name="id_Distrito" ColumnName="id_Distrito" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cantons">
+            <EntityTypeMapping TypeName="SistemaMatriculaModel.Canton">
+              <MappingFragment StoreEntitySet="Canton">
+                <ScalarProperty Name="id_Canton" ColumnName="id_Canton" />
+                <ScalarProperty Name="id_Provincia" ColumnName="id_Provincia" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="usuarioCrea" ColumnName="usuarioCrea" />
+                <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+                <ScalarProperty Name="usuarioModifica" ColumnName="usuarioModifica" />
+                <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+                <ScalarProperty Name="vc_Estado" ColumnName="vc_Estado" />
+                <ScalarProperty Name="id_CantonInec" ColumnName="id_CantonInec" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Carreras">
+            <EntityTypeMapping TypeName="SistemaMatriculaModel.Carrera">
+              <MappingFragment StoreEntitySet="Carreras">
+                <ScalarProperty Name="id_Carrera" ColumnName="id_Carrera" />
+                <ScalarProperty Name="id_Grado" ColumnName="id_Grado" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Distritoes">
+            <EntityTypeMapping TypeName="SistemaMatriculaModel.Distrito">
+              <MappingFragment StoreEntitySet="Distrito">
+                <ScalarProperty Name="id_Distrito" ColumnName="id_Distrito" />
+                <ScalarProperty Name="id_Canton" ColumnName="id_Canton" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="usuarioCrea" ColumnName="usuarioCrea" />
+                <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+                <ScalarProperty Name="usuarioModifica" ColumnName="usuarioModifica" />
+                <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+                <ScalarProperty Name="vc_Estado" ColumnName="vc_Estado" />
+                <ScalarProperty Name="id_DistritoInec" ColumnName="id_DistritoInec" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EnvioCorreos">
+            <EntityTypeMapping TypeName="SistemaMatriculaModel.EnvioCorreo">
+              <MappingFragment StoreEntitySet="EnvioCorreos">
+                <ScalarProperty Name="id_Envio" ColumnName="id_Envio" />
+                <ScalarProperty Name="Destinatario" ColumnName="Destinatario" />
+                <ScalarProperty Name="Asunto" ColumnName="Asunto" />
+                <ScalarProperty Name="Cuerpo" ColumnName="Cuerpo" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Bitacora" ColumnName="Bitacora" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Grados">
+            <EntityTypeMapping TypeName="SistemaMatriculaModel.Grado">
+              <MappingFragment StoreEntitySet="Grados">
+                <ScalarProperty Name="id_Grado" ColumnName="id_Grado" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Materias">
+            <EntityTypeMapping TypeName="SistemaMatriculaModel.Materia">
+              <MappingFragment StoreEntitySet="Materias">
+                <ScalarProperty Name="id_Materia" ColumnName="id_Materia" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Cant_Creditos" ColumnName="Cant_Creditos" />
+                <ScalarProperty Name="Cant_Horas" ColumnName="Cant_Horas" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Matriculas">
+            <EntityTypeMapping TypeName="SistemaMatriculaModel.Matricula">
+              <MappingFragment StoreEntitySet="Matricula">
+                <ScalarProperty Name="id_Matricula" ColumnName="id_Matricula" />
+                <ScalarProperty Name="id_Materia" ColumnName="id_Materia" />
+                <ScalarProperty Name="id_Alumno" ColumnName="id_Alumno" />
+                <ScalarProperty Name="Nota" ColumnName="Nota" />
+                <ScalarProperty Name="id_Periodo" ColumnName="id_Periodo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Periodos">
+            <EntityTypeMapping TypeName="SistemaMatriculaModel.Periodo">
+              <MappingFragment StoreEntitySet="Periodos">
+                <ScalarProperty Name="id_Periodo" ColumnName="id_Periodo" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
+                <ScalarProperty Name="Fecha_Fin" ColumnName="Fecha_Fin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Provincias">
+            <EntityTypeMapping TypeName="SistemaMatriculaModel.Provincia">
+              <MappingFragment StoreEntitySet="Provincia">
+                <ScalarProperty Name="id_Provincia" ColumnName="id_Provincia" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="usuarioCrea" ColumnName="usuarioCrea" />
+                <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+                <ScalarProperty Name="usuarioModifica" ColumnName="usuarioModifica" />
+                <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+                <ScalarProperty Name="vc_Estado" ColumnName="vc_Estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuarios">
+            <EntityTypeMapping TypeName="SistemaMatriculaModel.Usuario">
+              <MappingFragment StoreEntitySet="Usuarios">
+                <ScalarProperty Name="id_Usuario" ColumnName="id_Usuario" />
+                <ScalarProperty Name="id_Alumno" ColumnName="id_Alumno" />
+                <ScalarProperty Name="Usuario1" ColumnName="Usuario" />
+                <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+                <ScalarProperty Name="UltimaAccion" ColumnName="UltimaAccion" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="EsAlumno" ColumnName="EsAlumno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="MateriasCarrera" TypeName="SistemaMatriculaModel.MateriasCarrera" StoreEntitySet="MateriasCarrera">
+            <EndProperty Name="Carreras">
+              <ScalarProperty Name="id_Carrera" ColumnName="id_Carrera" />
+            </EndProperty>
+            <EndProperty Name="Materias">
+              <ScalarProperty Name="id_Materia" ColumnName="id_Materia" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <FunctionImportMapping FunctionImportName="RetornaCantones" FunctionName="SistemaMatriculaModel.Store.RetornaCantones">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.RetornaCantones_Result">
+                <ScalarProperty Name="id_Canton" ColumnName="id_Canton" />
+                <ScalarProperty Name="id_Provincia" ColumnName="id_Provincia" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="Provincia" ColumnName="Provincia" />
+                <ScalarProperty Name="usuarioCrea" ColumnName="usuarioCrea" />
+                <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+                <ScalarProperty Name="usuarioModifica" ColumnName="usuarioModifica" />
+                <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+                <ScalarProperty Name="vc_Estado" ColumnName="vc_Estado" />
+                <ScalarProperty Name="id_CantonInec" ColumnName="id_CantonInec" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="RetornaCantonesID" FunctionName="SistemaMatriculaModel.Store.RetornaCantonesID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.RetornaCantonesID_Result">
+                <ScalarProperty Name="id_Canton" ColumnName="id_Canton" />
+                <ScalarProperty Name="id_Provincia" ColumnName="id_Provincia" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="Provincia" ColumnName="Provincia" />
+                <ScalarProperty Name="usuarioCrea" ColumnName="usuarioCrea" />
+                <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+                <ScalarProperty Name="usuarioModifica" ColumnName="usuarioModifica" />
+                <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+                <ScalarProperty Name="vc_Estado" ColumnName="vc_Estado" />
+                <ScalarProperty Name="id_CantonInec" ColumnName="id_CantonInec" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="RetornaProvincias" FunctionName="SistemaMatriculaModel.Store.RetornaProvincias">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.RetornaProvincias_Result">
+                <ScalarProperty Name="id_Provincia" ColumnName="id_Provincia" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="usuarioCrea" ColumnName="usuarioCrea" />
+                <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+                <ScalarProperty Name="usuarioModifica" ColumnName="usuarioModifica" />
+                <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+                <ScalarProperty Name="vc_Estado" ColumnName="vc_Estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_ActualizaAlumno" FunctionName="SistemaMatriculaModel.Store.sp_ActualizaAlumno" />
+          <FunctionImportMapping FunctionImportName="sp_ActualizaCarrera" FunctionName="SistemaMatriculaModel.Store.sp_ActualizaCarrera" />
+          <FunctionImportMapping FunctionImportName="sp_ActualizaCorreo" FunctionName="SistemaMatriculaModel.Store.sp_ActualizaCorreo" />
+          <FunctionImportMapping FunctionImportName="sp_ActualizaGrados" FunctionName="SistemaMatriculaModel.Store.sp_ActualizaGrados" />
+          <FunctionImportMapping FunctionImportName="sp_ActualizaMateria" FunctionName="SistemaMatriculaModel.Store.sp_ActualizaMateria" />
+          <FunctionImportMapping FunctionImportName="sp_ActualizaMateriaCarrera" FunctionName="SistemaMatriculaModel.Store.sp_ActualizaMateriaCarrera" />
+          <FunctionImportMapping FunctionImportName="sp_ActualizaMatricula" FunctionName="SistemaMatriculaModel.Store.sp_ActualizaMatricula" />
+          <FunctionImportMapping FunctionImportName="sp_ActualizaPeriodo" FunctionName="SistemaMatriculaModel.Store.sp_ActualizaPeriodo" />
+          <FunctionImportMapping FunctionImportName="sp_ActualizaUsuario" FunctionName="SistemaMatriculaModel.Store.sp_ActualizaUsuario" />
+          <FunctionImportMapping FunctionImportName="sp_EliminaAlumno" FunctionName="SistemaMatriculaModel.Store.sp_EliminaAlumno" />
+          <FunctionImportMapping FunctionImportName="sp_EliminaCanton" FunctionName="SistemaMatriculaModel.Store.sp_EliminaCanton" />
+          <FunctionImportMapping FunctionImportName="sp_EliminaCarrera" FunctionName="SistemaMatriculaModel.Store.sp_EliminaCarrera" />
+          <FunctionImportMapping FunctionImportName="sp_EliminaGrados" FunctionName="SistemaMatriculaModel.Store.sp_EliminaGrados" />
+          <FunctionImportMapping FunctionImportName="sp_EliminaMateria" FunctionName="SistemaMatriculaModel.Store.sp_EliminaMateria" />
+          <FunctionImportMapping FunctionImportName="sp_EliminaMateriaCarrera" FunctionName="SistemaMatriculaModel.Store.sp_EliminaMateriaCarrera" />
+          <FunctionImportMapping FunctionImportName="sp_EliminaMatricula" FunctionName="SistemaMatriculaModel.Store.sp_EliminaMatricula" />
+          <FunctionImportMapping FunctionImportName="sp_EliminaPeriodo" FunctionName="SistemaMatriculaModel.Store.sp_EliminaPeriodo" />
+          <FunctionImportMapping FunctionImportName="sp_EliminaUsuario" FunctionName="SistemaMatriculaModel.Store.sp_EliminaUsuario" />
+          <FunctionImportMapping FunctionImportName="sp_InsertaAlumno" FunctionName="SistemaMatriculaModel.Store.sp_InsertaAlumno" />
+          <FunctionImportMapping FunctionImportName="sp_InsertaCanton" FunctionName="SistemaMatriculaModel.Store.sp_InsertaCanton" />
+          <FunctionImportMapping FunctionImportName="sp_InsertaCarrera" FunctionName="SistemaMatriculaModel.Store.sp_InsertaCarrera" />
+          <FunctionImportMapping FunctionImportName="sp_InsertaCorreo" FunctionName="SistemaMatriculaModel.Store.sp_InsertaCorreo" />
+          <FunctionImportMapping FunctionImportName="sp_InsertaGrados" FunctionName="SistemaMatriculaModel.Store.sp_InsertaGrados" />
+          <FunctionImportMapping FunctionImportName="sp_InsertaMateria" FunctionName="SistemaMatriculaModel.Store.sp_InsertaMateria" />
+          <FunctionImportMapping FunctionImportName="sp_InsertaMateriaCarrera" FunctionName="SistemaMatriculaModel.Store.sp_InsertaMateriaCarrera" />
+          <FunctionImportMapping FunctionImportName="sp_InsertaMatricula" FunctionName="SistemaMatriculaModel.Store.sp_InsertaMatricula" />
+          <FunctionImportMapping FunctionImportName="sp_InsertaPeriodo" FunctionName="SistemaMatriculaModel.Store.sp_InsertaPeriodo" />
+          <FunctionImportMapping FunctionImportName="sp_InsertaUsuario" FunctionName="SistemaMatriculaModel.Store.sp_InsertaUsuario" />
+          <FunctionImportMapping FunctionImportName="sp_ModificaCanton" FunctionName="SistemaMatriculaModel.Store.sp_ModificaCanton" />
+          <FunctionImportMapping FunctionImportName="sp_ReprocesaCorreosError" FunctionName="SistemaMatriculaModel.Store.sp_ReprocesaCorreosError" />
+          <FunctionImportMapping FunctionImportName="sp_RetornaAlumno" FunctionName="SistemaMatriculaModel.Store.sp_RetornaAlumno">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaAlumno_Result">
+                <ScalarProperty Name="id_Alumno" ColumnName="id_Alumno" />
+                <ScalarProperty Name="Fecha_Ingreso" ColumnName="Fecha_Ingreso" />
+                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="Fecha_Nacimiento" ColumnName="Fecha_Nacimiento" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+                <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Telefono1" ColumnName="Telefono1" />
+                <ScalarProperty Name="Telefono2" ColumnName="Telefono2" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="id_Provincia" ColumnName="id_Provincia" />
+                <ScalarProperty Name="id_Canton" ColumnName="id_Canton" />
+                <ScalarProperty Name="id_Distrito" ColumnName="id_Distrito" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RetornaAlumnoporID" FunctionName="SistemaMatriculaModel.Store.sp_RetornaAlumnoporID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaAlumnoporID_Result">
+                <ScalarProperty Name="id_Alumno" ColumnName="id_Alumno" />
+                <ScalarProperty Name="Fecha_Ingreso" ColumnName="Fecha_Ingreso" />
+                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="Fecha_Nacimiento" ColumnName="Fecha_Nacimiento" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+                <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Telefono1" ColumnName="Telefono1" />
+                <ScalarProperty Name="Telefono2" ColumnName="Telefono2" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="id_Provincia" ColumnName="id_Provincia" />
+                <ScalarProperty Name="id_Canton" ColumnName="id_Canton" />
+                <ScalarProperty Name="id_Distrito" ColumnName="id_Distrito" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RetornaCarrera" FunctionName="SistemaMatriculaModel.Store.sp_RetornaCarrera">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaCarrera_Result">
+                <ScalarProperty Name="id_Carrera" ColumnName="id_Carrera" />
+                <ScalarProperty Name="id_Grado" ColumnName="id_Grado" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RetornaCarreraPorID" FunctionName="SistemaMatriculaModel.Store.sp_RetornaCarreraPorID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaCarreraPorID_Result">
+                <ScalarProperty Name="id_Carrera" ColumnName="id_Carrera" />
+                <ScalarProperty Name="id_Grado" ColumnName="id_Grado" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RetornaCorreosPendientes" FunctionName="SistemaMatriculaModel.Store.sp_RetornaCorreosPendientes">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaCorreosPendientes_Result">
+                <ScalarProperty Name="id_Envio" ColumnName="id_Envio" />
+                <ScalarProperty Name="Destinatario" ColumnName="Destinatario" />
+                <ScalarProperty Name="Asunto" ColumnName="Asunto" />
+                <ScalarProperty Name="Cuerpo" ColumnName="Cuerpo" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Bitacora" ColumnName="Bitacora" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RetornaGrados" FunctionName="SistemaMatriculaModel.Store.sp_RetornaGrados">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaGrados_Result">
+                <ScalarProperty Name="id_Grado" ColumnName="id_Grado" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RetornaGradosPorID" FunctionName="SistemaMatriculaModel.Store.sp_RetornaGradosPorID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaGradosPorID_Result">
+                <ScalarProperty Name="id_Grado" ColumnName="id_Grado" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RetornaInicioSesion" FunctionName="SistemaMatriculaModel.Store.sp_RetornaInicioSesion">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaInicioSesion_Result">
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="EsAlumno" ColumnName="EsAlumno" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RetornaMateria" FunctionName="SistemaMatriculaModel.Store.sp_RetornaMateria">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaMateria_Result">
+                <ScalarProperty Name="id_Materia" ColumnName="id_Materia" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Cant_Creditos" ColumnName="Cant_Creditos" />
+                <ScalarProperty Name="Cant_Horas" ColumnName="Cant_Horas" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RetornaMateriaPorID" FunctionName="SistemaMatriculaModel.Store.sp_RetornaMateriaPorID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaMateriaPorID_Result">
+                <ScalarProperty Name="id_Materia" ColumnName="id_Materia" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Cant_Creditos" ColumnName="Cant_Creditos" />
+                <ScalarProperty Name="Cant_Horas" ColumnName="Cant_Horas" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RetornaMateriasAlumnoporID" FunctionName="SistemaMatriculaModel.Store.sp_RetornaMateriasAlumnoporID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaMateriasAlumnoporID_Result">
+                <ScalarProperty Name="id_Alumno" ColumnName="id_Alumno" />
+                <ScalarProperty Name="Fecha_Ingreso" ColumnName="Fecha_Ingreso" />
+                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="Fecha_Nacimiento" ColumnName="Fecha_Nacimiento" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+                <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Telefono1" ColumnName="Telefono1" />
+                <ScalarProperty Name="Telefono2" ColumnName="Telefono2" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="id_Provincia" ColumnName="id_Provincia" />
+                <ScalarProperty Name="id_Canton" ColumnName="id_Canton" />
+                <ScalarProperty Name="id_Distrito" ColumnName="id_Distrito" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RetornaMateriasCarrera" FunctionName="SistemaMatriculaModel.Store.sp_RetornaMateriasCarrera">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaMateriasCarrera_Result">
+                <ScalarProperty Name="id_Carrera" ColumnName="id_Carrera" />
+                <ScalarProperty Name="id_Materia" ColumnName="id_Materia" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RetornaMateriasCarreraPorCarrera" FunctionName="SistemaMatriculaModel.Store.sp_RetornaMateriasCarreraPorCarrera">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaMateriasCarreraPorCarrera_Result">
+                <ScalarProperty Name="id_Carrera" ColumnName="id_Carrera" />
+                <ScalarProperty Name="id_Materia" ColumnName="id_Materia" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RetornaMateriasCarreraPorMateria" FunctionName="SistemaMatriculaModel.Store.sp_RetornaMateriasCarreraPorMateria">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaMateriasCarreraPorMateria_Result">
+                <ScalarProperty Name="id_Carrera" ColumnName="id_Carrera" />
+                <ScalarProperty Name="id_Materia" ColumnName="id_Materia" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RetornaMateriasPeriodoporID" FunctionName="SistemaMatriculaModel.Store.sp_RetornaMateriasPeriodoporID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaMateriasPeriodoporID_Result">
+                <ScalarProperty Name="id_Periodo" ColumnName="id_Periodo" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
+                <ScalarProperty Name="Fecha_Fin" ColumnName="Fecha_Fin" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RetornaMatricula" FunctionName="SistemaMatriculaModel.Store.sp_RetornaMatricula">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaMatricula_Result">
+                <ScalarProperty Name="id_Matricula" ColumnName="id_Matricula" />
+                <ScalarProperty Name="id_Materia" ColumnName="id_Materia" />
+                <ScalarProperty Name="id_Alumno" ColumnName="id_Alumno" />
+                <ScalarProperty Name="Nota" ColumnName="Nota" />
+                <ScalarProperty Name="id_Periodo" ColumnName="id_Periodo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RetornaMatriculaporAlumno" FunctionName="SistemaMatriculaModel.Store.sp_RetornaMatriculaporAlumno">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaMatriculaporAlumno_Result">
+                <ScalarProperty Name="id_Matricula" ColumnName="id_Matricula" />
+                <ScalarProperty Name="id_Materia" ColumnName="id_Materia" />
+                <ScalarProperty Name="id_Alumno" ColumnName="id_Alumno" />
+                <ScalarProperty Name="Nota" ColumnName="Nota" />
+                <ScalarProperty Name="id_Periodo" ColumnName="id_Periodo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RetornaPeriodo" FunctionName="SistemaMatriculaModel.Store.sp_RetornaPeriodo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaPeriodo_Result">
+                <ScalarProperty Name="id_Periodo" ColumnName="id_Periodo" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
+                <ScalarProperty Name="Fecha_Fin" ColumnName="Fecha_Fin" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RetornaUsuario" FunctionName="SistemaMatriculaModel.Store.sp_RetornaUsuario">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaUsuario_Result">
+                <ScalarProperty Name="id_Usuario" ColumnName="id_Usuario" />
+                <ScalarProperty Name="id_Alumno" ColumnName="id_Alumno" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+                <ScalarProperty Name="UltimaAccion" ColumnName="UltimaAccion" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="EsAlumno" ColumnName="EsAlumno" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RetornaUsuarioporID" FunctionName="SistemaMatriculaModel.Store.sp_RetornaUsuarioporID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaUsuarioporID_Result">
+                <ScalarProperty Name="id_Usuario" ColumnName="id_Usuario" />
+                <ScalarProperty Name="id_Alumno" ColumnName="id_Alumno" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+                <ScalarProperty Name="UltimaAccion" ColumnName="UltimaAccion" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="EsAlumno" ColumnName="EsAlumno" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RetornaPeriodoporID" FunctionName="SistemaMatriculaModel.Store.sp_RetornaPeriodoporID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaPeriodoporID_Result">
+                <ScalarProperty Name="id_Periodo" ColumnName="id_Periodo" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
+                <ScalarProperty Name="Fecha_Fin" ColumnName="Fecha_Fin" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RetornaCantonPorProvincia" FunctionName="SistemaMatriculaModel.Store.sp_RetornaCantonPorProvincia">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaCantonPorProvincia_Result">
+                <ScalarProperty Name="id_Canton" ColumnName="id_Canton" />
+                <ScalarProperty Name="id_Provincia" ColumnName="id_Provincia" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="usuarioCrea" ColumnName="usuarioCrea" />
+                <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+                <ScalarProperty Name="usuarioModifica" ColumnName="usuarioModifica" />
+                <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+                <ScalarProperty Name="vc_Estado" ColumnName="vc_Estado" />
+                <ScalarProperty Name="id_CantonInec" ColumnName="id_CantonInec" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RetornaDistritoPorCanton" FunctionName="SistemaMatriculaModel.Store.sp_RetornaDistritoPorCanton">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaDistritoPorCanton_Result">
+                <ScalarProperty Name="id_Distrito" ColumnName="id_Distrito" />
+                <ScalarProperty Name="id_Canton" ColumnName="id_Canton" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="usuarioCrea" ColumnName="usuarioCrea" />
+                <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+                <ScalarProperty Name="usuarioModifica" ColumnName="usuarioModifica" />
+                <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+                <ScalarProperty Name="vc_Estado" ColumnName="vc_Estado" />
+                <ScalarProperty Name="id_DistritoInec" ColumnName="id_DistritoInec" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_RetornaAlumnoData" FunctionName="SistemaMatriculaModel.Store.sp_RetornaAlumnoData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaAlumnoData_Result">
+                <ScalarProperty Name="id_Alumno" ColumnName="id_Alumno" />
+                <ScalarProperty Name="Fecha_Ingreso" ColumnName="Fecha_Ingreso" />
+                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="Fecha_Nacimiento" ColumnName="Fecha_Nacimiento" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+                <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Telefono1" ColumnName="Telefono1" />
+                <ScalarProperty Name="Telefono2" ColumnName="Telefono2" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="id_Provincia" ColumnName="id_Provincia" />
+                <ScalarProperty Name="id_Canton" ColumnName="id_Canton" />
+                <ScalarProperty Name="id_Distrito" ColumnName="id_Distrito" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_ReporteMatriculaGen" FunctionName="SistemaMatriculaModel.Store.sp_ReporteMatriculaGen">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_ReporteMatriculaGen_Result">
+                <ScalarProperty Name="id_Matricula" ColumnName="id_Matricula" />
+                <ScalarProperty Name="Materia" ColumnName="Materia" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="NombreEst" ColumnName="NombreEst" />
+                <ScalarProperty Name="Nota" ColumnName="Nota" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_ReporteMatriculaPorEstudiante" FunctionName="SistemaMatriculaModel.Store.sp_ReporteMatriculaPorEstudiante">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_ReporteMatriculaPorEstudiante_Result">
+                <ScalarProperty Name="id_Matricula" ColumnName="id_Matricula" />
+                <ScalarProperty Name="Materia" ColumnName="Materia" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="NombreEst" ColumnName="NombreEst" />
+                <ScalarProperty Name="Nota" ColumnName="Nota" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

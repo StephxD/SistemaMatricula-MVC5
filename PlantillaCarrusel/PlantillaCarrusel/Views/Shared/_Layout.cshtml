@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+@if (Request.Cookies[FormsAuthentication.FormsCookieName] != null)
+{
+    var cookie = Request.Cookies[FormsAuthentication.FormsCookieName];
+    var ticket = FormsAuthentication.Decrypt(cookie.Value);
+    var userData = ticket.UserData;
+    var isAlumno = bool.Parse(userData);
+    var viewName = ViewContext.RouteData.Values["action"].ToString();
+    var rol = "";
+    var usrvar = @ticket.Name;
+
+
+    <input type="hidden" id="idusr" value="@usrvar" />
+
+    if (isAlumno)
+    {
+        rol = "Acceso Alumno";
+        <input type="hidden" id="permissionValue" value="0" />
+        if (viewName == "Grados" || viewName == "Carreras" || viewName == "Materias" || viewName == "MateriasPorCarrera" || viewName == "Periodos" || viewName == "Matricula")
+        {
+            <script>
+                alert('No tiene permisos a @viewName, contacte al administrador!');
+                window.location.href = '@Url.Action("Index", "Home")';
+            </script>
+        }
+    }
+    else
+    {
+        rol = "Acceso Docente";
+        <input type="hidden" id="permissionValue" value="1" />
+    }
+
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewBag.Title</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/Content/CSS/Layout.css" rel="stylesheet" />
+        <link href="~/Content/CSS/SpritesStyle.css" rel="stylesheet" />
+
+
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css">
+        <link href="https://kendo.cdn.telerik.com/themes/6.3.0/bootstrap/bootstrap-main.css" rel="stylesheet" type="text/css" />
+        <script src="https://kendo.cdn.telerik.com/2023.1.425/js/jquery.min.js"></script>
+        <script src="https://kendo.cdn.telerik.com/2023.1.425/js/jszip.min.js"></script>
+        <script src="https://kendo.cdn.telerik.com/2023.1.425/js/kendo.all.min.js"></script>
+        <script src="https://kendo.cdn.telerik.com/2023.1.425/js/kendo.aspnetmvc.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+
+        @* Add the bootstrap.min.js script: *@
+        <script src="@Url.Content("~/Scripts/bootstrap.min.js")"></script>
+
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><ab>@rol</ab></li>
+                <li><ab>@usrvar</ab></li>
+                <li><a href="@Url.Action("Index", "Home")">Inicio</a></li>
+                <li><a href="@Url.Action("Grados", "Grados")">Grados</a></li>
+                <li><a href="@Url.Action("Alumno", "Alumno")">Alumno</a></li>
+                <li><a href="@Url.Action("Carreras", "Carreras")">Carreras</a></li>
+                <li><a href="@Url.Action("Materias", "Materias")">Materias</a></li>
+                <li><a href="@Url.Action("MateriasPorCarrera", "MateriasPorCarrera")">Materias por Carrera</a></li>
+                <li><a href="@Url.Action("Periodos", "Periodos")">Periodos</a></li>
+                <li><a href="@Url.Action("Matricula", "Matricula")">Matricula</a></li>
+                <li><a href="@Url.Action("ReporteMaterias", "Reportes")">Reporte Materias por Alumno</a></li>
+                <li><a href="@Url.Action("LogOut", "Login")">Salir</a></li>
+            </ul>
+        </nav>
+        <header>
+            <img src="/Content/IMG/logo.jpg" alt="Logo de la organización" id="logo" />
+        </header>
+
+
+        <div class="container body-content">
+            @RenderBody()
+        </div>
+
+        <footer>
+            Derechos Reservados Grupo 3, programación 6 &copy; 2023
+        </footer>
+
+        @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>*@
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        @RenderSection("scripts", required: false)
+
+
+    </body>
+</html>
+}
+else
+{
+Response.Redirect("~/Login/Login");
+}

@@ -1,0 +1,793 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SistemaMatriculaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="EnvioCorreo">
+    <Key>
+      <PropertyRef Name="id_Envio" />
+    </Key>
+    <Property Name="id_Envio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Destinatario" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Asunto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Cuerpo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Bitacora" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="SistemaMatriculaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="EnvioCorreos" EntityType="Self.EnvioCorreo" />
+    <FunctionImport Name="sp_ActualizaCorreo">
+      <Parameter Name="id_Envio" Mode="In" Type="Int32" />
+      <Parameter Name="Estado" Mode="In" Type="String" />
+      <Parameter Name="Bitacora" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_InsertaCorreo">
+      <Parameter Name="Destinatario" Mode="In" Type="String" />
+      <Parameter Name="Asunto" Mode="In" Type="String" />
+      <Parameter Name="Cuerpo" Mode="In" Type="String" />
+      <Parameter Name="Estado" Mode="In" Type="String" />
+      <Parameter Name="Bitacora" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RetornaCarreraPorID" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaCarreraPorID_Result)">
+      <Parameter Name="id_Carrera" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RetornaCorreosPendientes" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaCorreosPendientes_Result)" />
+    <EntitySet Name="Alumnoes" EntityType="SistemaMatriculaModel.Alumno" />
+    <EntitySet Name="Cantons" EntityType="SistemaMatriculaModel.Canton" />
+    <EntitySet Name="Carreras" EntityType="SistemaMatriculaModel.Carrera" />
+    <EntitySet Name="Distritoes" EntityType="SistemaMatriculaModel.Distrito" />
+    <EntitySet Name="Grados" EntityType="SistemaMatriculaModel.Grado" />
+    <EntitySet Name="Materias" EntityType="SistemaMatriculaModel.Materia" />
+    <EntitySet Name="Matriculas" EntityType="SistemaMatriculaModel.Matricula" />
+    <EntitySet Name="Periodos" EntityType="SistemaMatriculaModel.Periodo" />
+    <EntitySet Name="Provincias" EntityType="SistemaMatriculaModel.Provincia" />
+    <EntitySet Name="Usuarios" EntityType="SistemaMatriculaModel.Usuario" />
+    <AssociationSet Name="FK__Alumno__id_Canto__55009F39" Association="SistemaMatriculaModel.FK__Alumno__id_Canto__55009F39">
+      <End Role="Canton" EntitySet="Cantons" />
+      <End Role="Alumno" EntitySet="Alumnoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Alumno__id_Canto__6E01572D" Association="SistemaMatriculaModel.FK__Alumno__id_Canto__6E01572D">
+      <End Role="Canton" EntitySet="Cantons" />
+      <End Role="Alumno" EntitySet="Alumnoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Alumno__id_Distr__55F4C372" Association="SistemaMatriculaModel.FK__Alumno__id_Distr__55F4C372">
+      <End Role="Distrito" EntitySet="Distritoes" />
+      <End Role="Alumno" EntitySet="Alumnoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Alumno__id_Distr__6EF57B66" Association="SistemaMatriculaModel.FK__Alumno__id_Distr__6EF57B66">
+      <End Role="Distrito" EntitySet="Distritoes" />
+      <End Role="Alumno" EntitySet="Alumnoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Alumno__id_Provi__540C7B00" Association="SistemaMatriculaModel.FK__Alumno__id_Provi__540C7B00">
+      <End Role="Provincia" EntitySet="Provincias" />
+      <End Role="Alumno" EntitySet="Alumnoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Alumno__id_Provi__6D0D32F4" Association="SistemaMatriculaModel.FK__Alumno__id_Provi__6D0D32F4">
+      <End Role="Provincia" EntitySet="Provincias" />
+      <End Role="Alumno" EntitySet="Alumnoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Matricula__id_Al__0B91BA14" Association="SistemaMatriculaModel.FK__Matricula__id_Al__0B91BA14">
+      <End Role="Alumno" EntitySet="Alumnoes" />
+      <End Role="Matricula" EntitySet="Matriculas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuarios__id_Alu__797309D9" Association="SistemaMatriculaModel.FK__Usuarios__id_Alu__797309D9">
+      <End Role="Alumno" EntitySet="Alumnoes" />
+      <End Role="Usuario" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="Canton_ref_Provincia" Association="SistemaMatriculaModel.Canton_ref_Provincia">
+      <End Role="Provincia" EntitySet="Provincias" />
+      <End Role="Canton" EntitySet="Cantons" />
+    </AssociationSet>
+    <AssociationSet Name="Distrito_ref_Canton" Association="SistemaMatriculaModel.Distrito_ref_Canton">
+      <End Role="Canton" EntitySet="Cantons" />
+      <End Role="Distrito" EntitySet="Distritoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Carreras__Descri__5AEE82B9" Association="SistemaMatriculaModel.FK__Carreras__Descri__5AEE82B9">
+      <End Role="Grado" EntitySet="Grados" />
+      <End Role="Carrera" EntitySet="Carreras" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Matricula__id_Ma__0A9D95DB" Association="SistemaMatriculaModel.FK__Matricula__id_Ma__0A9D95DB">
+      <End Role="Materia" EntitySet="Materias" />
+      <End Role="Matricula" EntitySet="Matriculas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Matricula__id_Pe__0C85DE4D" Association="SistemaMatriculaModel.FK__Matricula__id_Pe__0C85DE4D">
+      <End Role="Periodo" EntitySet="Periodos" />
+      <End Role="Matricula" EntitySet="Matriculas" />
+    </AssociationSet>
+    <AssociationSet Name="MateriasCarrera" Association="SistemaMatriculaModel.MateriasCarrera">
+      <End Role="Carrera" EntitySet="Carreras" />
+      <End Role="Materia" EntitySet="Materias" />
+    </AssociationSet>
+    <FunctionImport Name="RetornaCantones" ReturnType="Collection(SistemaMatriculaModel.RetornaCantones_Result)">
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="id_Provincia" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="RetornaCantonesID" ReturnType="Collection(SistemaMatriculaModel.RetornaCantonesID_Result)">
+      <Parameter Name="id_Canton" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="RetornaProvincias" ReturnType="Collection(SistemaMatriculaModel.RetornaProvincias_Result)">
+      <Parameter Name="nombre" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ActualizaAlumno">
+      <Parameter Name="id_Alumno" Mode="In" Type="Int32" />
+      <Parameter Name="Fecha_Ingreso" Mode="In" Type="DateTime" />
+      <Parameter Name="Cedula" Mode="In" Type="String" />
+      <Parameter Name="Genero" Mode="In" Type="String" />
+      <Parameter Name="Fecha_Nacimiento" Mode="In" Type="DateTime" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Apellido1" Mode="In" Type="String" />
+      <Parameter Name="Apellido2" Mode="In" Type="String" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="Telefono1" Mode="In" Type="String" />
+      <Parameter Name="Telefono2" Mode="In" Type="String" />
+      <Parameter Name="Correo" Mode="In" Type="String" />
+      <Parameter Name="id_Provincia" Mode="In" Type="Int32" />
+      <Parameter Name="id_Canton" Mode="In" Type="Int32" />
+      <Parameter Name="id_Distrito" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ActualizaCarrera">
+      <Parameter Name="id_Carrera" Mode="In" Type="Int32" />
+      <Parameter Name="id_Grado" Mode="In" Type="Int32" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Descripcion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ActualizaGrados">
+      <Parameter Name="id_Grado" Mode="In" Type="Int32" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Descripcion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ActualizaMateria">
+      <Parameter Name="id_Materia" Mode="In" Type="Int32" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Codigo" Mode="In" Type="String" />
+      <Parameter Name="Cant_Creditos" Mode="In" Type="Int32" />
+      <Parameter Name="Cant_Horas" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ActualizaMateriaCarrera">
+      <Parameter Name="id_Carrera" Mode="In" Type="Int32" />
+      <Parameter Name="id_Materia" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ActualizaMatricula">
+      <Parameter Name="id_Matricula" Mode="In" Type="Int32" />
+      <Parameter Name="id_Materia" Mode="In" Type="Int32" />
+      <Parameter Name="id_Alumno" Mode="In" Type="Int32" />
+      <Parameter Name="Nota" Mode="In" Type="Int32" />
+      <Parameter Name="id_Periodo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ActualizaPeriodo">
+      <Parameter Name="id_Periodo" Mode="In" Type="Int32" />
+      <Parameter Name="Codigo" Mode="In" Type="String" />
+      <Parameter Name="Fecha_Inicio" Mode="In" Type="DateTime" />
+      <Parameter Name="Fecha_Fin" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ActualizaUsuario">
+      <Parameter Name="id_Usuario" Mode="In" Type="Int32" />
+      <Parameter Name="id_Alumno" Mode="In" Type="Int32" />
+      <Parameter Name="Usuario" Mode="In" Type="String" />
+      <Parameter Name="Contrasena" Mode="In" Type="String" />
+      <Parameter Name="UltimaAccion" Mode="In" Type="DateTime" />
+      <Parameter Name="Activo" Mode="In" Type="Boolean" />
+      <Parameter Name="EsAlumno" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="sp_EliminaAlumno">
+      <Parameter Name="id_Alumno" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_EliminaCanton">
+      <Parameter Name="id_Canton" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_EliminaCarrera">
+      <Parameter Name="id_Carrera" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_EliminaGrados">
+      <Parameter Name="id_Grado" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_EliminaMateria">
+      <Parameter Name="id_Materia" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_EliminaMateriaCarrera">
+      <Parameter Name="id_Carrera" Mode="In" Type="Int32" />
+      <Parameter Name="id_Materia" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_EliminaMatricula">
+      <Parameter Name="id_Matricula" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_EliminaPeriodo">
+      <Parameter Name="id_Periodo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_EliminaUsuario">
+      <Parameter Name="id_Usuario" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_InsertaAlumno">
+      <Parameter Name="Fecha_Ingreso" Mode="In" Type="DateTime" />
+      <Parameter Name="Cedula" Mode="In" Type="String" />
+      <Parameter Name="Genero" Mode="In" Type="String" />
+      <Parameter Name="Fecha_Nacimiento" Mode="In" Type="DateTime" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Apellido1" Mode="In" Type="String" />
+      <Parameter Name="Apellido2" Mode="In" Type="String" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="Telefono1" Mode="In" Type="String" />
+      <Parameter Name="Telefono2" Mode="In" Type="String" />
+      <Parameter Name="Correo" Mode="In" Type="String" />
+      <Parameter Name="id_Provincia" Mode="In" Type="Int32" />
+      <Parameter Name="id_Canton" Mode="In" Type="Int32" />
+      <Parameter Name="id_Distrito" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_InsertaCanton">
+      <Parameter Name="id_Provincia" Mode="In" Type="Int32" />
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="id_CantonInec" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_InsertaCarrera">
+      <Parameter Name="id_Grado" Mode="In" Type="Int32" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Descripcion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_InsertaGrados">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Descripcion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_InsertaMateria">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Codigo" Mode="In" Type="String" />
+      <Parameter Name="Cant_Creditos" Mode="In" Type="Int32" />
+      <Parameter Name="Cant_Horas" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_InsertaMateriaCarrera">
+      <Parameter Name="id_Carrera" Mode="In" Type="Int32" />
+      <Parameter Name="id_Materia" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_InsertaMatricula">
+      <Parameter Name="id_Materia" Mode="In" Type="Int32" />
+      <Parameter Name="id_Alumno" Mode="In" Type="Int32" />
+      <Parameter Name="Nota" Mode="In" Type="Int32" />
+      <Parameter Name="id_Periodo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_InsertaPeriodo">
+      <Parameter Name="Codigo" Mode="In" Type="String" />
+      <Parameter Name="Fecha_Inicio" Mode="In" Type="DateTime" />
+      <Parameter Name="Fecha_Fin" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_InsertaUsuario">
+      <Parameter Name="id_Alumno" Mode="In" Type="Int32" />
+      <Parameter Name="Usuario" Mode="In" Type="String" />
+      <Parameter Name="Contrasena" Mode="In" Type="String" />
+      <Parameter Name="UltimaAccion" Mode="In" Type="DateTime" />
+      <Parameter Name="Activo" Mode="In" Type="Boolean" />
+      <Parameter Name="EsAlumno" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ModificaCanton">
+      <Parameter Name="id_Canton" Mode="In" Type="Int32" />
+      <Parameter Name="id_Provincia" Mode="In" Type="Int32" />
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="id_CantonInec" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ReprocesaCorreosError" />
+    <FunctionImport Name="sp_RetornaAlumno" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaAlumno_Result)" />
+    <FunctionImport Name="sp_RetornaAlumnoporID" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaAlumnoporID_Result)">
+      <Parameter Name="id_Alumno" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RetornaCarrera" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaCarrera_Result)" />
+    <FunctionImport Name="sp_RetornaGrados" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaGrados_Result)" />
+    <FunctionImport Name="sp_RetornaGradosPorID" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaGradosPorID_Result)">
+      <Parameter Name="id_Grado" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RetornaInicioSesion" ReturnType="Collection(Int32)">
+      <Parameter Name="Usuario" Mode="In" Type="String" />
+      <Parameter Name="Contrasena" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RetornaMateria" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaMateria_Result)" />
+    <FunctionImport Name="sp_RetornaMateriaPorID" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaMateriaPorID_Result)">
+      <Parameter Name="id_Materia" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RetornaMateriasAlumnoporID" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaMateriasAlumnoporID_Result)">
+      <Parameter Name="id_Alumno" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RetornaMateriasCarrera" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaMateriasCarrera_Result)" />
+    <FunctionImport Name="sp_RetornaMateriasCarreraPorCarrera" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaMateriasCarreraPorCarrera_Result)">
+      <Parameter Name="id_Materia" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RetornaMateriasCarreraPorMateria" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaMateriasCarreraPorMateria_Result)">
+      <Parameter Name="id_Carrera" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RetornaMateriasPeriodoporID" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaMateriasPeriodoporID_Result)">
+      <Parameter Name="id_Periodo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RetornaMatricula" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaMatricula_Result)" />
+    <FunctionImport Name="sp_RetornaMatriculaporAlumno" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaMatriculaporAlumno_Result)">
+      <Parameter Name="id_Alumno" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_RetornaPeriodo" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaPeriodo_Result)" />
+    <FunctionImport Name="sp_RetornaUsuario" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaUsuario_Result)" />
+    <FunctionImport Name="sp_RetornaUsuarioporID" ReturnType="Collection(SistemaMatriculaModel.sp_RetornaUsuarioporID_Result)">
+      <Parameter Name="id_Usuario" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sp_RetornaCarreraPorID_Result">
+    <Property Type="Int32" Name="id_Carrera" Nullable="false" />
+    <Property Type="Int32" Name="id_Grado" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="sp_RetornaCorreosPendientes_Result">
+    <Property Type="Int32" Name="id_Envio" Nullable="false" />
+    <Property Type="String" Name="Destinatario" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="Asunto" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Cuerpo" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="Estado" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Bitacora" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="Alumno">
+    <Key>
+      <PropertyRef Name="id_Alumno" />
+    </Key>
+    <Property Name="id_Alumno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha_Ingreso" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Cedula" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Genero" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Fecha_Nacimiento" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Apellido1" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Apellido2" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Direccion" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono1" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono2" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Correo" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="id_Provincia" Type="Int32" Nullable="false" />
+    <Property Name="id_Canton" Type="Int32" Nullable="false" />
+    <Property Name="id_Distrito" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Canton" Relationship="SistemaMatriculaModel.FK__Alumno__id_Canto__55009F39" FromRole="Alumno" ToRole="Canton" />
+    <NavigationProperty Name="Canton1" Relationship="SistemaMatriculaModel.FK__Alumno__id_Canto__6E01572D" FromRole="Alumno" ToRole="Canton" />
+    <NavigationProperty Name="Distrito" Relationship="SistemaMatriculaModel.FK__Alumno__id_Distr__55F4C372" FromRole="Alumno" ToRole="Distrito" />
+    <NavigationProperty Name="Distrito1" Relationship="SistemaMatriculaModel.FK__Alumno__id_Distr__6EF57B66" FromRole="Alumno" ToRole="Distrito" />
+    <NavigationProperty Name="Provincia" Relationship="SistemaMatriculaModel.FK__Alumno__id_Provi__540C7B00" FromRole="Alumno" ToRole="Provincia" />
+    <NavigationProperty Name="Provincia1" Relationship="SistemaMatriculaModel.FK__Alumno__id_Provi__6D0D32F4" FromRole="Alumno" ToRole="Provincia" />
+    <NavigationProperty Name="Matriculas" Relationship="SistemaMatriculaModel.FK__Matricula__id_Al__0B91BA14" FromRole="Alumno" ToRole="Matricula" />
+    <NavigationProperty Name="Usuarios" Relationship="SistemaMatriculaModel.FK__Usuarios__id_Alu__797309D9" FromRole="Alumno" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Canton">
+    <Key>
+      <PropertyRef Name="id_Canton" />
+    </Key>
+    <Property Name="id_Canton" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_Provincia" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="usuarioCrea" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fechaCrea" Type="DateTime" Precision="3" />
+    <Property Name="usuarioModifica" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fechaModifica" Type="DateTime" Precision="3" />
+    <Property Name="vc_Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="id_CantonInec" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Alumnoes" Relationship="SistemaMatriculaModel.FK__Alumno__id_Canto__55009F39" FromRole="Canton" ToRole="Alumno" />
+    <NavigationProperty Name="Alumnoes1" Relationship="SistemaMatriculaModel.FK__Alumno__id_Canto__6E01572D" FromRole="Canton" ToRole="Alumno" />
+    <NavigationProperty Name="Provincia" Relationship="SistemaMatriculaModel.Canton_ref_Provincia" FromRole="Canton" ToRole="Provincia" />
+    <NavigationProperty Name="Distritoes" Relationship="SistemaMatriculaModel.Distrito_ref_Canton" FromRole="Canton" ToRole="Distrito" />
+  </EntityType>
+  <EntityType Name="Carrera">
+    <Key>
+      <PropertyRef Name="id_Carrera" />
+    </Key>
+    <Property Name="id_Carrera" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_Grado" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Grado" Relationship="SistemaMatriculaModel.FK__Carreras__Descri__5AEE82B9" FromRole="Carrera" ToRole="Grado" />
+    <NavigationProperty Name="Materias" Relationship="SistemaMatriculaModel.MateriasCarrera" FromRole="Carrera" ToRole="Materia" />
+  </EntityType>
+  <EntityType Name="Distrito">
+    <Key>
+      <PropertyRef Name="id_Distrito" />
+    </Key>
+    <Property Name="id_Distrito" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_Canton" Type="Int32" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="usuarioCrea" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fechaCrea" Type="DateTime" Precision="3" />
+    <Property Name="usuarioModifica" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fechaModifica" Type="DateTime" Precision="3" />
+    <Property Name="vc_Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="id_DistritoInec" Type="Int32" />
+    <NavigationProperty Name="Alumnoes" Relationship="SistemaMatriculaModel.FK__Alumno__id_Distr__55F4C372" FromRole="Distrito" ToRole="Alumno" />
+    <NavigationProperty Name="Alumnoes1" Relationship="SistemaMatriculaModel.FK__Alumno__id_Distr__6EF57B66" FromRole="Distrito" ToRole="Alumno" />
+    <NavigationProperty Name="Canton" Relationship="SistemaMatriculaModel.Distrito_ref_Canton" FromRole="Distrito" ToRole="Canton" />
+  </EntityType>
+  <EntityType Name="Grado">
+    <Key>
+      <PropertyRef Name="id_Grado" />
+    </Key>
+    <Property Name="id_Grado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Carreras" Relationship="SistemaMatriculaModel.FK__Carreras__Descri__5AEE82B9" FromRole="Grado" ToRole="Carrera" />
+  </EntityType>
+  <EntityType Name="Materia">
+    <Key>
+      <PropertyRef Name="id_Materia" />
+    </Key>
+    <Property Name="id_Materia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Cant_Creditos" Type="Int32" Nullable="false" />
+    <Property Name="Cant_Horas" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Matriculas" Relationship="SistemaMatriculaModel.FK__Matricula__id_Ma__0A9D95DB" FromRole="Materia" ToRole="Matricula" />
+    <NavigationProperty Name="Carreras" Relationship="SistemaMatriculaModel.MateriasCarrera" FromRole="Materia" ToRole="Carrera" />
+  </EntityType>
+  <EntityType Name="Matricula">
+    <Key>
+      <PropertyRef Name="id_Matricula" />
+    </Key>
+    <Property Name="id_Matricula" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_Materia" Type="Int32" Nullable="false" />
+    <Property Name="id_Alumno" Type="Int32" Nullable="false" />
+    <Property Name="Nota" Type="Int32" Nullable="false" />
+    <Property Name="id_Periodo" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Alumno" Relationship="SistemaMatriculaModel.FK__Matricula__id_Al__0B91BA14" FromRole="Matricula" ToRole="Alumno" />
+    <NavigationProperty Name="Materia" Relationship="SistemaMatriculaModel.FK__Matricula__id_Ma__0A9D95DB" FromRole="Matricula" ToRole="Materia" />
+    <NavigationProperty Name="Periodo" Relationship="SistemaMatriculaModel.FK__Matricula__id_Pe__0C85DE4D" FromRole="Matricula" ToRole="Periodo" />
+  </EntityType>
+  <EntityType Name="Periodo">
+    <Key>
+      <PropertyRef Name="id_Periodo" />
+    </Key>
+    <Property Name="id_Periodo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Fecha_Inicio" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Fecha_Fin" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Matriculas" Relationship="SistemaMatriculaModel.FK__Matricula__id_Pe__0C85DE4D" FromRole="Periodo" ToRole="Matricula" />
+  </EntityType>
+  <EntityType Name="Provincia">
+    <Key>
+      <PropertyRef Name="id_Provincia" />
+    </Key>
+    <Property Name="id_Provincia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="usuarioCrea" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fechaCrea" Type="DateTime" Precision="3" />
+    <Property Name="usuarioModifica" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fechaModifica" Type="DateTime" Precision="3" />
+    <Property Name="vc_Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Alumnoes" Relationship="SistemaMatriculaModel.FK__Alumno__id_Provi__540C7B00" FromRole="Provincia" ToRole="Alumno" />
+    <NavigationProperty Name="Alumnoes1" Relationship="SistemaMatriculaModel.FK__Alumno__id_Provi__6D0D32F4" FromRole="Provincia" ToRole="Alumno" />
+    <NavigationProperty Name="Cantons" Relationship="SistemaMatriculaModel.Canton_ref_Provincia" FromRole="Provincia" ToRole="Canton" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="id_Usuario" />
+    </Key>
+    <Property Name="id_Usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_Alumno" Type="Int32" />
+    <Property Name="Usuario1" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Contrasena" Type="Binary" Nullable="false" MaxLength="64" FixedLength="true" />
+    <Property Name="UltimaAccion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <Property Name="EsAlumno" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Alumno" Relationship="SistemaMatriculaModel.FK__Usuarios__id_Alu__797309D9" FromRole="Usuario" ToRole="Alumno" />
+  </EntityType>
+  <Association Name="FK__Alumno__id_Canto__55009F39">
+    <End Type="SistemaMatriculaModel.Canton" Role="Canton" Multiplicity="1" />
+    <End Type="SistemaMatriculaModel.Alumno" Role="Alumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Canton">
+        <PropertyRef Name="id_Canton" />
+      </Principal>
+      <Dependent Role="Alumno">
+        <PropertyRef Name="id_Canton" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Alumno__id_Canto__6E01572D">
+    <End Type="SistemaMatriculaModel.Canton" Role="Canton" Multiplicity="1" />
+    <End Type="SistemaMatriculaModel.Alumno" Role="Alumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Canton">
+        <PropertyRef Name="id_Canton" />
+      </Principal>
+      <Dependent Role="Alumno">
+        <PropertyRef Name="id_Canton" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Alumno__id_Distr__55F4C372">
+    <End Type="SistemaMatriculaModel.Distrito" Role="Distrito" Multiplicity="1" />
+    <End Type="SistemaMatriculaModel.Alumno" Role="Alumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Distrito">
+        <PropertyRef Name="id_Distrito" />
+      </Principal>
+      <Dependent Role="Alumno">
+        <PropertyRef Name="id_Distrito" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Alumno__id_Distr__6EF57B66">
+    <End Type="SistemaMatriculaModel.Distrito" Role="Distrito" Multiplicity="1" />
+    <End Type="SistemaMatriculaModel.Alumno" Role="Alumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Distrito">
+        <PropertyRef Name="id_Distrito" />
+      </Principal>
+      <Dependent Role="Alumno">
+        <PropertyRef Name="id_Distrito" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Alumno__id_Provi__540C7B00">
+    <End Type="SistemaMatriculaModel.Provincia" Role="Provincia" Multiplicity="1" />
+    <End Type="SistemaMatriculaModel.Alumno" Role="Alumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Provincia">
+        <PropertyRef Name="id_Provincia" />
+      </Principal>
+      <Dependent Role="Alumno">
+        <PropertyRef Name="id_Provincia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Alumno__id_Provi__6D0D32F4">
+    <End Type="SistemaMatriculaModel.Provincia" Role="Provincia" Multiplicity="1" />
+    <End Type="SistemaMatriculaModel.Alumno" Role="Alumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Provincia">
+        <PropertyRef Name="id_Provincia" />
+      </Principal>
+      <Dependent Role="Alumno">
+        <PropertyRef Name="id_Provincia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Matricula__id_Al__0B91BA14">
+    <End Type="SistemaMatriculaModel.Alumno" Role="Alumno" Multiplicity="1" />
+    <End Type="SistemaMatriculaModel.Matricula" Role="Matricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumno">
+        <PropertyRef Name="id_Alumno" />
+      </Principal>
+      <Dependent Role="Matricula">
+        <PropertyRef Name="id_Alumno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuarios__id_Alu__797309D9">
+    <End Type="SistemaMatriculaModel.Alumno" Role="Alumno" Multiplicity="0..1" />
+    <End Type="SistemaMatriculaModel.Usuario" Role="Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumno">
+        <PropertyRef Name="id_Alumno" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="id_Alumno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Canton_ref_Provincia">
+    <End Type="SistemaMatriculaModel.Provincia" Role="Provincia" Multiplicity="1" />
+    <End Type="SistemaMatriculaModel.Canton" Role="Canton" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Provincia">
+        <PropertyRef Name="id_Provincia" />
+      </Principal>
+      <Dependent Role="Canton">
+        <PropertyRef Name="id_Provincia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Distrito_ref_Canton">
+    <End Type="SistemaMatriculaModel.Canton" Role="Canton" Multiplicity="0..1" />
+    <End Type="SistemaMatriculaModel.Distrito" Role="Distrito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Canton">
+        <PropertyRef Name="id_Canton" />
+      </Principal>
+      <Dependent Role="Distrito">
+        <PropertyRef Name="id_Canton" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Carreras__Descri__5AEE82B9">
+    <End Type="SistemaMatriculaModel.Grado" Role="Grado" Multiplicity="1" />
+    <End Type="SistemaMatriculaModel.Carrera" Role="Carrera" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grado">
+        <PropertyRef Name="id_Grado" />
+      </Principal>
+      <Dependent Role="Carrera">
+        <PropertyRef Name="id_Grado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Matricula__id_Ma__0A9D95DB">
+    <End Type="SistemaMatriculaModel.Materia" Role="Materia" Multiplicity="1" />
+    <End Type="SistemaMatriculaModel.Matricula" Role="Matricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Materia">
+        <PropertyRef Name="id_Materia" />
+      </Principal>
+      <Dependent Role="Matricula">
+        <PropertyRef Name="id_Materia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Matricula__id_Pe__0C85DE4D">
+    <End Type="SistemaMatriculaModel.Periodo" Role="Periodo" Multiplicity="1" />
+    <End Type="SistemaMatriculaModel.Matricula" Role="Matricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Periodo">
+        <PropertyRef Name="id_Periodo" />
+      </Principal>
+      <Dependent Role="Matricula">
+        <PropertyRef Name="id_Periodo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MateriasCarrera">
+    <End Type="SistemaMatriculaModel.Carrera" Role="Carrera" Multiplicity="*" />
+    <End Type="SistemaMatriculaModel.Materia" Role="Materia" Multiplicity="*" />
+  </Association>
+  <ComplexType Name="RetornaCantones_Result">
+    <Property Type="Int32" Name="id_Canton" Nullable="false" />
+    <Property Type="Int32" Name="id_Provincia" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Provincia" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="usuarioCrea" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="fechaCrea" Nullable="true" Precision="23" />
+    <Property Type="String" Name="usuarioModifica" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="fechaModifica" Nullable="true" Precision="23" />
+    <Property Type="String" Name="vc_Estado" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="id_CantonInec" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="RetornaCantonesID_Result">
+    <Property Type="Int32" Name="id_Canton" Nullable="false" />
+    <Property Type="Int32" Name="id_Provincia" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Provincia" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="usuarioCrea" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="fechaCrea" Nullable="true" Precision="23" />
+    <Property Type="String" Name="usuarioModifica" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="fechaModifica" Nullable="true" Precision="23" />
+    <Property Type="String" Name="vc_Estado" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="id_CantonInec" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="RetornaProvincias_Result">
+    <Property Type="Int32" Name="id_Provincia" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="usuarioCrea" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="fechaCrea" Nullable="true" Precision="23" />
+    <Property Type="String" Name="usuarioModifica" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="fechaModifica" Nullable="true" Precision="23" />
+    <Property Type="String" Name="vc_Estado" Nullable="true" MaxLength="3" />
+  </ComplexType>
+  <ComplexType Name="sp_RetornaAlumno_Result">
+    <Property Type="Int32" Name="id_Alumno" Nullable="false" />
+    <Property Type="DateTime" Name="Fecha_Ingreso" Nullable="false" />
+    <Property Type="String" Name="Cedula" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="Genero" Nullable="false" MaxLength="1" />
+    <Property Type="DateTime" Name="Fecha_Nacimiento" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Apellido1" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Apellido2" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Direccion" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="Telefono1" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Telefono2" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Correo" Nullable="false" MaxLength="30" />
+    <Property Type="Int32" Name="id_Provincia" Nullable="false" />
+    <Property Type="Int32" Name="id_Canton" Nullable="false" />
+    <Property Type="Int32" Name="id_Distrito" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_RetornaAlumnoporID_Result">
+    <Property Type="Int32" Name="id_Alumno" Nullable="false" />
+    <Property Type="DateTime" Name="Fecha_Ingreso" Nullable="false" />
+    <Property Type="String" Name="Cedula" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="Genero" Nullable="false" MaxLength="1" />
+    <Property Type="DateTime" Name="Fecha_Nacimiento" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Apellido1" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Apellido2" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Direccion" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="Telefono1" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Telefono2" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Correo" Nullable="false" MaxLength="30" />
+    <Property Type="Int32" Name="id_Provincia" Nullable="false" />
+    <Property Type="Int32" Name="id_Canton" Nullable="false" />
+    <Property Type="Int32" Name="id_Distrito" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_RetornaCarrera_Result">
+    <Property Type="Int32" Name="id_Carrera" Nullable="false" />
+    <Property Type="Int32" Name="id_Grado" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="sp_RetornaGrados_Result">
+    <Property Type="Int32" Name="id_Grado" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="sp_RetornaGradosPorID_Result">
+    <Property Type="Int32" Name="id_Grado" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="sp_RetornaMateria_Result">
+    <Property Type="Int32" Name="id_Materia" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Codigo" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="Cant_Creditos" Nullable="false" />
+    <Property Type="Int32" Name="Cant_Horas" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_RetornaMateriaPorID_Result">
+    <Property Type="Int32" Name="id_Materia" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Codigo" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="Cant_Creditos" Nullable="false" />
+    <Property Type="Int32" Name="Cant_Horas" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_RetornaMateriasAlumnoporID_Result">
+    <Property Type="Int32" Name="id_Alumno" Nullable="false" />
+    <Property Type="DateTime" Name="Fecha_Ingreso" Nullable="false" />
+    <Property Type="String" Name="Cedula" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="Genero" Nullable="false" MaxLength="1" />
+    <Property Type="DateTime" Name="Fecha_Nacimiento" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Apellido1" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Apellido2" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Direccion" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="Telefono1" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Telefono2" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Correo" Nullable="false" MaxLength="30" />
+    <Property Type="Int32" Name="id_Provincia" Nullable="false" />
+    <Property Type="Int32" Name="id_Canton" Nullable="false" />
+    <Property Type="Int32" Name="id_Distrito" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_RetornaMateriasCarrera_Result">
+    <Property Type="Int32" Name="id_Carrera" Nullable="false" />
+    <Property Type="Int32" Name="id_Materia" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_RetornaMateriasCarreraPorCarrera_Result">
+    <Property Type="Int32" Name="id_Carrera" Nullable="false" />
+    <Property Type="Int32" Name="id_Materia" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_RetornaMateriasCarreraPorMateria_Result">
+    <Property Type="Int32" Name="id_Carrera" Nullable="false" />
+    <Property Type="Int32" Name="id_Materia" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_RetornaMateriasPeriodoporID_Result">
+    <Property Type="Int32" Name="id_Periodo" Nullable="false" />
+    <Property Type="String" Name="Codigo" Nullable="false" MaxLength="10" />
+    <Property Type="DateTime" Name="Fecha_Inicio" Nullable="false" />
+    <Property Type="DateTime" Name="Fecha_Fin" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_RetornaMatricula_Result">
+    <Property Type="Int32" Name="id_Matricula" Nullable="false" />
+    <Property Type="Int32" Name="id_Materia" Nullable="false" />
+    <Property Type="Int32" Name="id_Alumno" Nullable="false" />
+    <Property Type="Int32" Name="Nota" Nullable="false" />
+    <Property Type="Int32" Name="id_Periodo" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_RetornaMatriculaporAlumno_Result">
+    <Property Type="Int32" Name="id_Matricula" Nullable="false" />
+    <Property Type="Int32" Name="id_Materia" Nullable="false" />
+    <Property Type="Int32" Name="id_Alumno" Nullable="false" />
+    <Property Type="Int32" Name="Nota" Nullable="false" />
+    <Property Type="Int32" Name="id_Periodo" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_RetornaPeriodo_Result">
+    <Property Type="Int32" Name="id_Periodo" Nullable="false" />
+    <Property Type="String" Name="Codigo" Nullable="false" MaxLength="10" />
+    <Property Type="DateTime" Name="Fecha_Inicio" Nullable="false" />
+    <Property Type="DateTime" Name="Fecha_Fin" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_RetornaUsuario_Result">
+    <Property Type="Int32" Name="id_Usuario" Nullable="false" />
+    <Property Type="Int32" Name="id_Alumno" Nullable="true" />
+    <Property Type="String" Name="Usuario" Nullable="false" MaxLength="30" />
+    <Property Type="Binary" Name="Contrasena" Nullable="false" MaxLength="64" />
+    <Property Type="DateTime" Name="UltimaAccion" Nullable="false" Precision="23" />
+    <Property Type="Boolean" Name="Activo" Nullable="false" />
+    <Property Type="Boolean" Name="EsAlumno" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_RetornaUsuarioporID_Result">
+    <Property Type="Int32" Name="id_Usuario" Nullable="false" />
+    <Property Type="Int32" Name="id_Alumno" Nullable="true" />
+    <Property Type="String" Name="Usuario" Nullable="false" MaxLength="30" />
+    <Property Type="Binary" Name="Contrasena" Nullable="false" MaxLength="64" />
+    <Property Type="DateTime" Name="UltimaAccion" Nullable="false" Precision="23" />
+    <Property Type="Boolean" Name="Activo" Nullable="false" />
+    <Property Type="Boolean" Name="EsAlumno" Nullable="false" />
+  </ComplexType>
+</Schema>

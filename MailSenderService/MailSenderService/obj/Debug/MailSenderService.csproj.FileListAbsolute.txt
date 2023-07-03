@@ -1,0 +1,16 @@
+C:\Users\Administrator\source\repos\MailSenderService\MailSenderService\bin\Debug\MailSenderService.exe.config
+C:\Users\Administrator\source\repos\MailSenderService\MailSenderService\bin\Debug\MailSenderService.exe
+C:\Users\Administrator\source\repos\MailSenderService\MailSenderService\bin\Debug\MailSenderService.pdb
+C:\Users\Administrator\source\repos\MailSenderService\MailSenderService\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\Administrator\source\repos\MailSenderService\MailSenderService\bin\Debug\System.Security.AccessControl.dll
+C:\Users\Administrator\source\repos\MailSenderService\MailSenderService\bin\Debug\System.Security.Permissions.dll
+C:\Users\Administrator\source\repos\MailSenderService\MailSenderService\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\Administrator\source\repos\MailSenderService\MailSenderService\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\Administrator\source\repos\MailSenderService\MailSenderService\bin\Debug\System.Security.AccessControl.xml
+C:\Users\Administrator\source\repos\MailSenderService\MailSenderService\bin\Debug\System.Security.Permissions.xml
+C:\Users\Administrator\source\repos\MailSenderService\MailSenderService\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\Administrator\source\repos\MailSenderService\MailSenderService\obj\Debug\MailSenderService.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\MailSenderService\MailSenderService\obj\Debug\MailSenderService.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\MailSenderService\MailSenderService\obj\Debug\MailSenderService.csproj.CopyComplete
+C:\Users\Administrator\source\repos\MailSenderService\MailSenderService\obj\Debug\MailSenderService.exe
+C:\Users\Administrator\source\repos\MailSenderService\MailSenderService\obj\Debug\MailSenderService.pdb

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2b6141ebe5584b11a6ecca35acdfc31b" Name="Diagram1">
+        <EntityTypeShape EntityType="SistemaMatriculaModel.Alumno" Width="1.5" PointX="7.5" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SistemaMatriculaModel.Canton" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SistemaMatriculaModel.Carrera" Width="1.5" PointX="5.25" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SistemaMatriculaModel.Distrito" Width="1.5" PointX="5.25" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SistemaMatriculaModel.EnvioCorreo" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SistemaMatriculaModel.Grado" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SistemaMatriculaModel.Materia" Width="1.5" PointX="7.5" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SistemaMatriculaModel.Matricula" Width="1.5" PointX="9.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SistemaMatriculaModel.Periodo" Width="1.5" PointX="7.5" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SistemaMatriculaModel.Provincia" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SistemaMatriculaModel.Usuario" Width="1.5" PointX="9.75" PointY="11.625" IsExpanded="true" />
+        <AssociationConnector Association="SistemaMatriculaModel.FK__Alumno__id_Canto__55009F39" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaMatriculaModel.FK__Alumno__id_Canto__6E01572D" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaMatriculaModel.FK__Alumno__id_Distr__55F4C372" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaMatriculaModel.FK__Alumno__id_Distr__6EF57B66" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaMatriculaModel.FK__Alumno__id_Provi__540C7B00" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaMatriculaModel.FK__Alumno__id_Provi__6D0D32F4" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaMatriculaModel.FK__Matricula__id_Al__0B91BA14" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaMatriculaModel.FK__Usuarios__id_Alu__797309D9" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaMatriculaModel.Canton_ref_Provincia" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaMatriculaModel.Distrito_ref_Canton" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaMatriculaModel.FK__Carreras__Descri__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaMatriculaModel.FK__Matricula__id_Ma__0A9D95DB" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaMatriculaModel.FK__Matricula__id_Pe__0C85DE4D" ManuallyRouted="false" />
+        <AssociationConnector Association="SistemaMatriculaModel.MateriasCarrera" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

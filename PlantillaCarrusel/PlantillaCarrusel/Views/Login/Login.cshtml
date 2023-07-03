@@ -1,0 +1,100 @@
+﻿
+@model PlantillaCarrusel.Models.ModelLogin
+@{
+    Layout = null;
+}
+
+@if (TempData["Message"] != null)
+{
+    <script>alert('@TempData["Message"]');</script>
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="~/Content/CSS/Login.css" rel="stylesheet" />
+    <link href="~/Content/CSS/SpritesStyle.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div class="container h-100">
+        <div class="d-flex justify-content-center h-100">
+            <div class="user_card">
+                <div class="d-flex justify-content-center">
+                    <div class="brand_logo_container">
+
+                        <video src="~/Content/Video/VIDEOHTML.MP4" autoplay="true" muted="true" loop="true" class="brand_logo" alt="Logo"> </video>
+
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center form_container">
+                    @using (Html.BeginForm("LoginValidacion", "Login", FormMethod.Post))
+                    {
+                        <div class="input-group mb-3">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            @Html.TextBoxFor(m => m.Username, new { @class = "form-control input_user", placeholder = "Nombre de Usuario", Name = "paramusername" })
+                        </div>
+                        <div class="input-group mb-2">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fas fa-unlock"></i></span>
+                            </div>
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control input_pass", placeholder = "Contrasena", Name = "parampassword" })
+                        </div>
+
+                        <div class="d-flex justify-content-center mt-3 login_container">
+                            <!--<button type="submit" class="btn login_btn">Iniciar Sesión</button>-->
+                            <button type="submit" class="LgnBTN"></button>
+                        </div>
+                    }
+                </div>
+            </div>
+
+                <div id="control" class="smaller">
+                    <input type="button" id="btnPause" onclick="PausePlay()" class='MusicPlayer' value="" />
+                </div>
+
+            </div>
+        </div>
+
+
+
+    <audio src="~/Content/AUDIO/Game.mp3" id="audio1" autoplay loop>
+        Audio is not supported.
+    </audio>
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+</body>
+</html>
+
+<script>
+    var audio = document.getElementById("audio1");
+    var btn = document.getElementById("btnPause");
+
+    function PausePlay() {
+        if (audio.paused) {
+            audio.play();
+            btn.value = "";
+        } else if (audio.ended) {
+            audio.currentTime = 0;
+            audio.play();
+            btn.value = "";
+        }
+        else {
+            audio.pause();
+            btn.value = "";
+        }
+    }
+</script>

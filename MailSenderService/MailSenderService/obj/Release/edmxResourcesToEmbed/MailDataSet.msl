@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SistemaMatriculaModelStoreContainer" CdmEntityContainer="SistemaMatriculaEntities">
+    <EntitySetMapping Name="EnvioCorreos">
+      <EntityTypeMapping TypeName="SistemaMatriculaModel.EnvioCorreo">
+        <MappingFragment StoreEntitySet="EnvioCorreos">
+          <ScalarProperty Name="id_Envio" ColumnName="id_Envio" />
+          <ScalarProperty Name="Destinatario" ColumnName="Destinatario" />
+          <ScalarProperty Name="Asunto" ColumnName="Asunto" />
+          <ScalarProperty Name="Cuerpo" ColumnName="Cuerpo" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Bitacora" ColumnName="Bitacora" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_ActualizaCorreo" FunctionName="SistemaMatriculaModel.Store.sp_ActualizaCorreo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertaCorreo" FunctionName="SistemaMatriculaModel.Store.sp_InsertaCorreo" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaCarreraPorID" FunctionName="SistemaMatriculaModel.Store.sp_RetornaCarreraPorID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaCarreraPorID_Result">
+          <ScalarProperty Name="id_Carrera" ColumnName="id_Carrera" />
+          <ScalarProperty Name="id_Grado" ColumnName="id_Grado" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RetornaCorreosPendientes" FunctionName="SistemaMatriculaModel.Store.sp_RetornaCorreosPendientes">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaCorreosPendientes_Result">
+          <ScalarProperty Name="id_Envio" ColumnName="id_Envio" />
+          <ScalarProperty Name="Destinatario" ColumnName="Destinatario" />
+          <ScalarProperty Name="Asunto" ColumnName="Asunto" />
+          <ScalarProperty Name="Cuerpo" ColumnName="Cuerpo" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Bitacora" ColumnName="Bitacora" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Alumnoes">
+      <EntityTypeMapping TypeName="SistemaMatriculaModel.Alumno">
+        <MappingFragment StoreEntitySet="Alumno">
+          <ScalarProperty Name="id_Distrito" ColumnName="id_Distrito" />
+          <ScalarProperty Name="id_Canton" ColumnName="id_Canton" />
+          <ScalarProperty Name="id_Provincia" ColumnName="id_Provincia" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="Telefono2" ColumnName="Telefono2" />
+          <ScalarProperty Name="Telefono1" ColumnName="Telefono1" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
+          <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Fecha_Nacimiento" ColumnName="Fecha_Nacimiento" />
+          <ScalarProperty Name="Genero" ColumnName="Genero" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="Fecha_Ingreso" ColumnName="Fecha_Ingreso" />
+          <ScalarProperty Name="id_Alumno" ColumnName="id_Alumno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cantons">
+      <EntityTypeMapping TypeName="SistemaMatriculaModel.Canton">
+        <MappingFragment StoreEntitySet="Canton">
+          <ScalarProperty Name="id_CantonInec" ColumnName="id_CantonInec" />
+          <ScalarProperty Name="vc_Estado" ColumnName="vc_Estado" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+          <ScalarProperty Name="usuarioModifica" ColumnName="usuarioModifica" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="usuarioCrea" ColumnName="usuarioCrea" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="id_Provincia" ColumnName="id_Provincia" />
+          <ScalarProperty Name="id_Canton" ColumnName="id_Canton" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Carreras">
+      <EntityTypeMapping TypeName="SistemaMatriculaModel.Carrera">
+        <MappingFragment StoreEntitySet="Carreras">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="id_Grado" ColumnName="id_Grado" />
+          <ScalarProperty Name="id_Carrera" ColumnName="id_Carrera" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Distritoes">
+      <EntityTypeMapping TypeName="SistemaMatriculaModel.Distrito">
+        <MappingFragment StoreEntitySet="Distrito">
+          <ScalarProperty Name="id_DistritoInec" ColumnName="id_DistritoInec" />
+          <ScalarProperty Name="vc_Estado" ColumnName="vc_Estado" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+          <ScalarProperty Name="usuarioModifica" ColumnName="usuarioModifica" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="usuarioCrea" ColumnName="usuarioCrea" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="id_Canton" ColumnName="id_Canton" />
+          <ScalarProperty Name="id_Distrito" ColumnName="id_Distrito" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grados">
+      <EntityTypeMapping TypeName="SistemaMatriculaModel.Grado">
+        <MappingFragment StoreEntitySet="Grados">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="id_Grado" ColumnName="id_Grado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Materias">
+      <EntityTypeMapping TypeName="SistemaMatriculaModel.Materia">
+        <MappingFragment StoreEntitySet="Materias">
+          <ScalarProperty Name="Cant_Horas" ColumnName="Cant_Horas" />
+          <ScalarProperty Name="Cant_Creditos" ColumnName="Cant_Creditos" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="id_Materia" ColumnName="id_Materia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Matriculas">
+      <EntityTypeMapping TypeName="SistemaMatriculaModel.Matricula">
+        <MappingFragment StoreEntitySet="Matricula">
+          <ScalarProperty Name="id_Periodo" ColumnName="id_Periodo" />
+          <ScalarProperty Name="Nota" ColumnName="Nota" />
+          <ScalarProperty Name="id_Alumno" ColumnName="id_Alumno" />
+          <ScalarProperty Name="id_Materia" ColumnName="id_Materia" />
+          <ScalarProperty Name="id_Matricula" ColumnName="id_Matricula" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Periodos">
+      <EntityTypeMapping TypeName="SistemaMatriculaModel.Periodo">
+        <MappingFragment StoreEntitySet="Periodos">
+          <ScalarProperty Name="Fecha_Fin" ColumnName="Fecha_Fin" />
+          <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="id_Periodo" ColumnName="id_Periodo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Provincias">
+      <EntityTypeMapping TypeName="SistemaMatriculaModel.Provincia">
+        <MappingFragment StoreEntitySet="Provincia">
+          <ScalarProperty Name="vc_Estado" ColumnName="vc_Estado" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+          <ScalarProperty Name="usuarioModifica" ColumnName="usuarioModifica" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="usuarioCrea" ColumnName="usuarioCrea" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="id_Provincia" ColumnName="id_Provincia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="SistemaMatriculaModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="EsAlumno" ColumnName="EsAlumno" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="UltimaAccion" ColumnName="UltimaAccion" />
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+          <ScalarProperty Name="Usuario1" ColumnName="Usuario" />
+          <ScalarProperty Name="id_Alumno" ColumnName="id_Alumno" />
+          <ScalarProperty Name="id_Usuario" ColumnName="id_Usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="MateriasCarrera" TypeName="SistemaMatriculaModel.MateriasCarrera" StoreEntitySet="MateriasCarrera">
+      <EndProperty Name="Materia">
+        <ScalarProperty Name="id_Materia" ColumnName="id_Materia" />
+      </EndProperty>
+      <EndProperty Name="Carrera">
+        <ScalarProperty Name="id_Carrera" ColumnName="id_Carrera" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="RetornaCantones" FunctionName="SistemaMatriculaModel.Store.RetornaCantones">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SistemaMatriculaModel.RetornaCantones_Result">
+          <ScalarProperty Name="id_Canton" ColumnName="id_Canton" />
+          <ScalarProperty Name="id_Provincia" ColumnName="id_Provincia" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="Provincia" ColumnName="Provincia" />
+          <ScalarProperty Name="usuarioCrea" ColumnName="usuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="usuarioModifica" ColumnName="usuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+          <ScalarProperty Name="vc_Estado" ColumnName="vc_Estado" />
+          <ScalarProperty Name="id_CantonInec" ColumnName="id_CantonInec" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="RetornaCantonesID" FunctionName="SistemaMatriculaModel.Store.RetornaCantonesID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SistemaMatriculaModel.RetornaCantonesID_Result">
+          <ScalarProperty Name="id_Canton" ColumnName="id_Canton" />
+          <ScalarProperty Name="id_Provincia" ColumnName="id_Provincia" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="Provincia" ColumnName="Provincia" />
+          <ScalarProperty Name="usuarioCrea" ColumnName="usuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="usuarioModifica" ColumnName="usuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+          <ScalarProperty Name="vc_Estado" ColumnName="vc_Estado" />
+          <ScalarProperty Name="id_CantonInec" ColumnName="id_CantonInec" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="RetornaProvincias" FunctionName="SistemaMatriculaModel.Store.RetornaProvincias">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SistemaMatriculaModel.RetornaProvincias_Result">
+          <ScalarProperty Name="id_Provincia" ColumnName="id_Provincia" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="usuarioCrea" ColumnName="usuarioCrea" />
+          <ScalarProperty Name="fechaCrea" ColumnName="fechaCrea" />
+          <ScalarProperty Name="usuarioModifica" ColumnName="usuarioModifica" />
+          <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
+          <ScalarProperty Name="vc_Estado" ColumnName="vc_Estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ActualizaAlumno" FunctionName="SistemaMatriculaModel.Store.sp_ActualizaAlumno" />
+    <FunctionImportMapping FunctionImportName="sp_ActualizaCarrera" FunctionName="SistemaMatriculaModel.Store.sp_ActualizaCarrera" />
+    <FunctionImportMapping FunctionImportName="sp_ActualizaGrados" FunctionName="SistemaMatriculaModel.Store.sp_ActualizaGrados" />
+    <FunctionImportMapping FunctionImportName="sp_ActualizaMateria" FunctionName="SistemaMatriculaModel.Store.sp_ActualizaMateria" />
+    <FunctionImportMapping FunctionImportName="sp_ActualizaMateriaCarrera" FunctionName="SistemaMatriculaModel.Store.sp_ActualizaMateriaCarrera" />
+    <FunctionImportMapping FunctionImportName="sp_ActualizaMatricula" FunctionName="SistemaMatriculaModel.Store.sp_ActualizaMatricula" />
+    <FunctionImportMapping FunctionImportName="sp_ActualizaPeriodo" FunctionName="SistemaMatriculaModel.Store.sp_ActualizaPeriodo" />
+    <FunctionImportMapping FunctionImportName="sp_ActualizaUsuario" FunctionName="SistemaMatriculaModel.Store.sp_ActualizaUsuario" />
+    <FunctionImportMapping FunctionImportName="sp_EliminaAlumno" FunctionName="SistemaMatriculaModel.Store.sp_EliminaAlumno" />
+    <FunctionImportMapping FunctionImportName="sp_EliminaCanton" FunctionName="SistemaMatriculaModel.Store.sp_EliminaCanton" />
+    <FunctionImportMapping FunctionImportName="sp_EliminaCarrera" FunctionName="SistemaMatriculaModel.Store.sp_EliminaCarrera" />
+    <FunctionImportMapping FunctionImportName="sp_EliminaGrados" FunctionName="SistemaMatriculaModel.Store.sp_EliminaGrados" />
+    <FunctionImportMapping FunctionImportName="sp_EliminaMateria" FunctionName="SistemaMatriculaModel.Store.sp_EliminaMateria" />
+    <FunctionImportMapping FunctionImportName="sp_EliminaMateriaCarrera" FunctionName="SistemaMatriculaModel.Store.sp_EliminaMateriaCarrera" />
+    <FunctionImportMapping FunctionImportName="sp_EliminaMatricula" FunctionName="SistemaMatriculaModel.Store.sp_EliminaMatricula" />
+    <FunctionImportMapping FunctionImportName="sp_EliminaPeriodo" FunctionName="SistemaMatriculaModel.Store.sp_EliminaPeriodo" />
+    <FunctionImportMapping FunctionImportName="sp_EliminaUsuario" FunctionName="SistemaMatriculaModel.Store.sp_EliminaUsuario" />
+    <FunctionImportMapping FunctionImportName="sp_InsertaAlumno" FunctionName="SistemaMatriculaModel.Store.sp_InsertaAlumno" />
+    <FunctionImportMapping FunctionImportName="sp_InsertaCanton" FunctionName="SistemaMatriculaModel.Store.sp_InsertaCanton" />
+    <FunctionImportMapping FunctionImportName="sp_InsertaCarrera" FunctionName="SistemaMatriculaModel.Store.sp_InsertaCarrera" />
+    <FunctionImportMapping FunctionImportName="sp_InsertaGrados" FunctionName="SistemaMatriculaModel.Store.sp_InsertaGrados" />
+    <FunctionImportMapping FunctionImportName="sp_InsertaMateria" FunctionName="SistemaMatriculaModel.Store.sp_InsertaMateria" />
+    <FunctionImportMapping FunctionImportName="sp_InsertaMateriaCarrera" FunctionName="SistemaMatriculaModel.Store.sp_InsertaMateriaCarrera" />
+    <FunctionImportMapping FunctionImportName="sp_InsertaMatricula" FunctionName="SistemaMatriculaModel.Store.sp_InsertaMatricula" />
+    <FunctionImportMapping FunctionImportName="sp_InsertaPeriodo" FunctionName="SistemaMatriculaModel.Store.sp_InsertaPeriodo" />
+    <FunctionImportMapping FunctionImportName="sp_InsertaUsuario" FunctionName="SistemaMatriculaModel.Store.sp_InsertaUsuario" />
+    <FunctionImportMapping FunctionImportName="sp_ModificaCanton" FunctionName="SistemaMatriculaModel.Store.sp_ModificaCanton" />
+    <FunctionImportMapping FunctionImportName="sp_ReprocesaCorreosError" FunctionName="SistemaMatriculaModel.Store.sp_ReprocesaCorreosError" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaAlumno" FunctionName="SistemaMatriculaModel.Store.sp_RetornaAlumno">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaAlumno_Result">
+          <ScalarProperty Name="id_Alumno" ColumnName="id_Alumno" />
+          <ScalarProperty Name="Fecha_Ingreso" ColumnName="Fecha_Ingreso" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="Genero" ColumnName="Genero" />
+          <ScalarProperty Name="Fecha_Nacimiento" ColumnName="Fecha_Nacimiento" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+          <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono1" ColumnName="Telefono1" />
+          <ScalarProperty Name="Telefono2" ColumnName="Telefono2" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="id_Provincia" ColumnName="id_Provincia" />
+          <ScalarProperty Name="id_Canton" ColumnName="id_Canton" />
+          <ScalarProperty Name="id_Distrito" ColumnName="id_Distrito" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RetornaAlumnoporID" FunctionName="SistemaMatriculaModel.Store.sp_RetornaAlumnoporID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaAlumnoporID_Result">
+          <ScalarProperty Name="id_Alumno" ColumnName="id_Alumno" />
+          <ScalarProperty Name="Fecha_Ingreso" ColumnName="Fecha_Ingreso" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="Genero" ColumnName="Genero" />
+          <ScalarProperty Name="Fecha_Nacimiento" ColumnName="Fecha_Nacimiento" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+          <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono1" ColumnName="Telefono1" />
+          <ScalarProperty Name="Telefono2" ColumnName="Telefono2" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="id_Provincia" ColumnName="id_Provincia" />
+          <ScalarProperty Name="id_Canton" ColumnName="id_Canton" />
+          <ScalarProperty Name="id_Distrito" ColumnName="id_Distrito" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RetornaCarrera" FunctionName="SistemaMatriculaModel.Store.sp_RetornaCarrera">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaCarrera_Result">
+          <ScalarProperty Name="id_Carrera" ColumnName="id_Carrera" />
+          <ScalarProperty Name="id_Grado" ColumnName="id_Grado" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RetornaGrados" FunctionName="SistemaMatriculaModel.Store.sp_RetornaGrados">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaGrados_Result">
+          <ScalarProperty Name="id_Grado" ColumnName="id_Grado" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RetornaGradosPorID" FunctionName="SistemaMatriculaModel.Store.sp_RetornaGradosPorID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaGradosPorID_Result">
+          <ScalarProperty Name="id_Grado" ColumnName="id_Grado" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RetornaInicioSesion" FunctionName="SistemaMatriculaModel.Store.sp_RetornaInicioSesion" />
+    <FunctionImportMapping FunctionImportName="sp_RetornaMateria" FunctionName="SistemaMatriculaModel.Store.sp_RetornaMateria">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaMateria_Result">
+          <ScalarProperty Name="id_Materia" ColumnName="id_Materia" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Cant_Creditos" ColumnName="Cant_Creditos" />
+          <ScalarProperty Name="Cant_Horas" ColumnName="Cant_Horas" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RetornaMateriaPorID" FunctionName="SistemaMatriculaModel.Store.sp_RetornaMateriaPorID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaMateriaPorID_Result">
+          <ScalarProperty Name="id_Materia" ColumnName="id_Materia" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Cant_Creditos" ColumnName="Cant_Creditos" />
+          <ScalarProperty Name="Cant_Horas" ColumnName="Cant_Horas" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RetornaMateriasAlumnoporID" FunctionName="SistemaMatriculaModel.Store.sp_RetornaMateriasAlumnoporID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaMateriasAlumnoporID_Result">
+          <ScalarProperty Name="id_Alumno" ColumnName="id_Alumno" />
+          <ScalarProperty Name="Fecha_Ingreso" ColumnName="Fecha_Ingreso" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="Genero" ColumnName="Genero" />
+          <ScalarProperty Name="Fecha_Nacimiento" ColumnName="Fecha_Nacimiento" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+          <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono1" ColumnName="Telefono1" />
+          <ScalarProperty Name="Telefono2" ColumnName="Telefono2" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="id_Provincia" ColumnName="id_Provincia" />
+          <ScalarProperty Name="id_Canton" ColumnName="id_Canton" />
+          <ScalarProperty Name="id_Distrito" ColumnName="id_Distrito" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RetornaMateriasCarrera" FunctionName="SistemaMatriculaModel.Store.sp_RetornaMateriasCarrera">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaMateriasCarrera_Result">
+          <ScalarProperty Name="id_Carrera" ColumnName="id_Carrera" />
+          <ScalarProperty Name="id_Materia" ColumnName="id_Materia" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RetornaMateriasCarreraPorCarrera" FunctionName="SistemaMatriculaModel.Store.sp_RetornaMateriasCarreraPorCarrera">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaMateriasCarreraPorCarrera_Result">
+          <ScalarProperty Name="id_Carrera" ColumnName="id_Carrera" />
+          <ScalarProperty Name="id_Materia" ColumnName="id_Materia" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RetornaMateriasCarreraPorMateria" FunctionName="SistemaMatriculaModel.Store.sp_RetornaMateriasCarreraPorMateria">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaMateriasCarreraPorMateria_Result">
+          <ScalarProperty Name="id_Carrera" ColumnName="id_Carrera" />
+          <ScalarProperty Name="id_Materia" ColumnName="id_Materia" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RetornaMateriasPeriodoporID" FunctionName="SistemaMatriculaModel.Store.sp_RetornaMateriasPeriodoporID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaMateriasPeriodoporID_Result">
+          <ScalarProperty Name="id_Periodo" ColumnName="id_Periodo" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
+          <ScalarProperty Name="Fecha_Fin" ColumnName="Fecha_Fin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RetornaMatricula" FunctionName="SistemaMatriculaModel.Store.sp_RetornaMatricula">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaMatricula_Result">
+          <ScalarProperty Name="id_Matricula" ColumnName="id_Matricula" />
+          <ScalarProperty Name="id_Materia" ColumnName="id_Materia" />
+          <ScalarProperty Name="id_Alumno" ColumnName="id_Alumno" />
+          <ScalarProperty Name="Nota" ColumnName="Nota" />
+          <ScalarProperty Name="id_Periodo" ColumnName="id_Periodo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RetornaMatriculaporAlumno" FunctionName="SistemaMatriculaModel.Store.sp_RetornaMatriculaporAlumno">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaMatriculaporAlumno_Result">
+          <ScalarProperty Name="id_Matricula" ColumnName="id_Matricula" />
+          <ScalarProperty Name="id_Materia" ColumnName="id_Materia" />
+          <ScalarProperty Name="id_Alumno" ColumnName="id_Alumno" />
+          <ScalarProperty Name="Nota" ColumnName="Nota" />
+          <ScalarProperty Name="id_Periodo" ColumnName="id_Periodo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RetornaPeriodo" FunctionName="SistemaMatriculaModel.Store.sp_RetornaPeriodo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaPeriodo_Result">
+          <ScalarProperty Name="id_Periodo" ColumnName="id_Periodo" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
+          <ScalarProperty Name="Fecha_Fin" ColumnName="Fecha_Fin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RetornaUsuario" FunctionName="SistemaMatriculaModel.Store.sp_RetornaUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaUsuario_Result">
+          <ScalarProperty Name="id_Usuario" ColumnName="id_Usuario" />
+          <ScalarProperty Name="id_Alumno" ColumnName="id_Alumno" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+          <ScalarProperty Name="UltimaAccion" ColumnName="UltimaAccion" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="EsAlumno" ColumnName="EsAlumno" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_RetornaUsuarioporID" FunctionName="SistemaMatriculaModel.Store.sp_RetornaUsuarioporID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SistemaMatriculaModel.sp_RetornaUsuarioporID_Result">
+          <ScalarProperty Name="id_Usuario" ColumnName="id_Usuario" />
+          <ScalarProperty Name="id_Alumno" ColumnName="id_Alumno" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+          <ScalarProperty Name="UltimaAccion" ColumnName="UltimaAccion" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="EsAlumno" ColumnName="EsAlumno" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

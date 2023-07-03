@@ -1,0 +1,711 @@
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\PlantillaCarrusel.dll.config
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\PlantillaCarrusel.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\PlantillaCarrusel.pdb
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csc.exe
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csc.exe.config
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csc.rsp
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csi.exe
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csi.exe.config
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csi.rsp
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.AppContext.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Console.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.Compression.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Net.Http.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Net.Sockets.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.ValueTuple.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.XPath.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\vbc.exe
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\vbc.exe.config
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\vbc.rsp
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\VBCSCompiler.exe
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\Antlr3.Runtime.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\Newtonsoft.Json.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Helpers.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Mvc.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Optimization.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Razor.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Deployment.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Razor.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\WebGrease.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Helpers.xml
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Mvc.xml
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Optimization.xml
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Razor.xml
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.xml
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Deployment.xml
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Razor.xml
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\Newtonsoft.Json.xml
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\Antlr3.Runtime.pdb
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Helpers.resources.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Mvc.resources.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Optimization.resources.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Razor.resources.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.WebPages.resources.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.csproj.AssemblyReference.cache
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.csproj.CoreCompileInputs.cache
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.csproj.CopyComplete
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.dll
+C:\Users\usuario\source\repos\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.pdb
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\PlantillaCarrusel.dll.config
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\PlantillaCarrusel.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\PlantillaCarrusel.pdb
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csc.exe
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csc.exe.config
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csc.rsp
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csi.exe
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csi.exe.config
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csi.rsp
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.AppContext.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Console.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.Compression.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Net.Http.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Net.Sockets.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.ValueTuple.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.XPath.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\vbc.exe
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\vbc.exe.config
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\vbc.rsp
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\VBCSCompiler.exe
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\Antlr3.Runtime.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\Newtonsoft.Json.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Helpers.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Mvc.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Optimization.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Razor.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Deployment.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Razor.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\WebGrease.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Helpers.xml
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Mvc.xml
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Optimization.xml
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Razor.xml
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.xml
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Deployment.xml
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Razor.xml
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\Newtonsoft.Json.xml
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\Antlr3.Runtime.pdb
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Helpers.resources.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Mvc.resources.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Optimization.resources.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Razor.resources.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.WebPages.resources.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.csproj.CopyComplete
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.dll
+C:\Users\PC\Desktop\PROYECTO UNIDO\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.pdb
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\PlantillaCarrusel.dll.config
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\PlantillaCarrusel.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\PlantillaCarrusel.pdb
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csc.exe
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csc.exe.config
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csc.rsp
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csi.exe
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csi.exe.config
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csi.rsp
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.AppContext.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Console.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.Compression.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Net.Http.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.ValueTuple.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\vbc.exe
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\vbc.exe.config
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\vbc.rsp
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\VBCSCompiler.exe
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\Antlr3.Runtime.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Helpers.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Mvc.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Optimization.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Razor.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Razor.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\WebGrease.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Helpers.xml
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Mvc.xml
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Optimization.xml
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Razor.xml
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.xml
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Razor.xml
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\Newtonsoft.Json.xml
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\Antlr3.Runtime.pdb
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Optimization.resources.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Razor.resources.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.csproj.CopyComplete
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.pdb
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\EntityFramework.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\EntityFramework.SqlServer.dll
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\EntityFramework.xml
+C:\Users\Administrator\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\EntityFramework.SqlServer.xml
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\PlantillaCarrusel.dll.config
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\PlantillaCarrusel.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\PlantillaCarrusel.pdb
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csc.exe
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csc.exe.config
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csc.rsp
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csi.exe
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csi.exe.config
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csi.rsp
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.AppContext.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Console.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.Compression.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Net.Http.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Net.Sockets.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.ValueTuple.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.XPath.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\vbc.exe
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\vbc.exe.config
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\vbc.rsp
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\VBCSCompiler.exe
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\Antlr3.Runtime.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\EntityFramework.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\EntityFramework.SqlServer.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\Newtonsoft.Json.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Helpers.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Mvc.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Optimization.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Razor.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Deployment.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Razor.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\WebGrease.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\EntityFramework.xml
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\EntityFramework.SqlServer.xml
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Helpers.xml
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Mvc.xml
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Optimization.xml
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Razor.xml
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.xml
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Deployment.xml
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Razor.xml
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\Newtonsoft.Json.xml
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\Antlr3.Runtime.pdb
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Helpers.resources.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Mvc.resources.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Optimization.resources.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Razor.resources.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.WebPages.resources.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.csproj.AssemblyReference.cache
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.csproj.CoreCompileInputs.cache
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.csproj.CopyComplete
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.dll
+C:\Users\stefa\Desktop\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.pdb
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\PlantillaCarrusel.dll.config
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\PlantillaCarrusel.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\PlantillaCarrusel.pdb
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csc.exe
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csc.exe.config
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csc.rsp
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csi.exe
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csi.exe.config
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csi.rsp
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.AppContext.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Console.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.Compression.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Net.Http.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.ValueTuple.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\vbc.exe
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\vbc.exe.config
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\vbc.rsp
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\VBCSCompiler.exe
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\Antlr3.Runtime.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\EntityFramework.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\EntityFramework.SqlServer.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Helpers.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Mvc.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Optimization.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Razor.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Razor.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\WebGrease.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\EntityFramework.xml
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\EntityFramework.SqlServer.xml
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Helpers.xml
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Mvc.xml
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Optimization.xml
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Razor.xml
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.xml
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Razor.xml
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\Newtonsoft.Json.xml
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\Antlr3.Runtime.pdb
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Optimization.resources.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Razor.resources.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.csproj.CopyComplete
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.dll
+C:\Users\Administrator\Desktop\PlantillaV2\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.pdb
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\PlantillaCarrusel.dll.config
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\PlantillaCarrusel.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\PlantillaCarrusel.pdb
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csc.exe
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csc.exe.config
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csc.rsp
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csi.exe
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csi.exe.config
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csi.rsp
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.AppContext.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Console.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.Compression.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Net.Http.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Net.Sockets.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.ValueTuple.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.XPath.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\vbc.exe
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\vbc.exe.config
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\vbc.rsp
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\VBCSCompiler.exe
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\Antlr3.Runtime.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\EntityFramework.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\EntityFramework.SqlServer.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\Newtonsoft.Json.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Helpers.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Mvc.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Optimization.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Razor.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Deployment.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Razor.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\WebGrease.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\EntityFramework.xml
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\EntityFramework.SqlServer.xml
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Helpers.xml
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Mvc.xml
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Optimization.xml
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Razor.xml
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.xml
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Deployment.xml
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Razor.xml
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\Newtonsoft.Json.xml
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\Antlr3.Runtime.pdb
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Helpers.resources.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Mvc.resources.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Optimization.resources.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Razor.resources.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.WebPages.resources.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.csproj.CopyComplete
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.dll
+C:\Users\PC\Desktop\PROYECTO FINAL PROGRA 6\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.pdb
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\PlantillaCarrusel.dll.config
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\PlantillaCarrusel.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\PlantillaCarrusel.pdb
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csc.exe
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csc.exe.config
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csc.rsp
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csi.exe
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csi.exe.config
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csi.rsp
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.AppContext.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Console.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.Compression.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Net.Http.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.ValueTuple.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\vbc.exe
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\vbc.exe.config
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\vbc.rsp
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\VBCSCompiler.exe
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\Antlr3.Runtime.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\EntityFramework.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\EntityFramework.SqlServer.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Helpers.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Mvc.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Optimization.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Razor.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Razor.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\WebGrease.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\EntityFramework.xml
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\EntityFramework.SqlServer.xml
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Helpers.xml
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Mvc.xml
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Optimization.xml
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Razor.xml
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.xml
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Razor.xml
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\Newtonsoft.Json.xml
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\Antlr3.Runtime.pdb
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Optimization.resources.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Razor.resources.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.csproj.CopyComplete
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.dll
+C:\Users\Administrator\Desktop\PlantillaV4\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.pdb
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\PlantillaCarrusel.dll.config
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\PlantillaCarrusel.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\PlantillaCarrusel.pdb
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\Antlr3.Runtime.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\EntityFramework.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\EntityFramework.SqlServer.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\Newtonsoft.Json.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Helpers.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Mvc.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Optimization.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Razor.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Razor.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\WebGrease.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\EntityFramework.xml
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\EntityFramework.SqlServer.xml
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Helpers.xml
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Mvc.xml
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Optimization.xml
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.Razor.xml
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.xml
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\System.Web.WebPages.Razor.xml
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\Newtonsoft.Json.xml
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\Antlr3.Runtime.pdb
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Optimization.resources.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.Razor.resources.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.csproj.AssemblyReference.cache
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.csproj.CoreCompileInputs.cache
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.csproj.CopyComplete
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\obj\Debug\PlantillaCarrusel.pdb
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csc.exe
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csc.exe.config
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csc.rsp
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csi.exe
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csi.exe.config
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\csi.rsp
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.AppContext.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Console.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.Compression.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Net.Http.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.ValueTuple.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\vbc.exe
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\vbc.exe.config
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\vbc.rsp
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\VBCSCompiler.exe
+C:\Users\Steph\Desktop\Proyectos\Sistema Matricula MVC5\PlantillaCarrusel\PlantillaCarrusel\bin\roslyn\VBCSCompiler.exe.config

@@ -1,0 +1,5 @@
+C:\Users\Administrator\source\repos\MailSenderLibrary\MailSenderLibrary\bin\Debug\MailSenderLibrary.dll
+C:\Users\Administrator\source\repos\MailSenderLibrary\MailSenderLibrary\bin\Debug\MailSenderLibrary.pdb
+C:\Users\Administrator\source\repos\MailSenderLibrary\MailSenderLibrary\obj\Debug\MailSenderLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\MailSenderLibrary\MailSenderLibrary\obj\Debug\MailSenderLibrary.dll
+C:\Users\Administrator\source\repos\MailSenderLibrary\MailSenderLibrary\obj\Debug\MailSenderLibrary.pdb

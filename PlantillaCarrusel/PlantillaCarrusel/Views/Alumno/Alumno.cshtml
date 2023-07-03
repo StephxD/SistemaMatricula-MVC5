@@ -1,0 +1,191 @@
+﻿@model PlantillaCarrusel.Models.MatriculaGenerals
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Mantenimiento de Alumnos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link href="/Content/CSS/Grados.css" rel="stylesheet" />
+    <link href="/Content/CSS/Sprite.css" rel="stylesheet" />
+    <link href="~/Content/CSS/Layout.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h2>Alumnos</h2>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="kendoGrid">
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Alumno Modal -->
+    <div id="dialog-containerEDT">
+        <div id="dialogEDT" title="Editar los detalles de un Alumno">
+            <form>
+                <input type="hidden" id="editAlumnoId">
+                <div class="input-field">
+                    <label for="editAlumnoFecha_Ingreso">Fecha de Ingreso</label>
+                    <input type="text" id="editAlumnoFecha_Ingreso">
+                </div>
+                <div class="input-field">
+                    <label for="editAlumnoCedula">Cedula</label>
+                    <input type="text" id="editAlumnoCedula">
+                </div>
+                <div class="input-field">
+                    <label for="editAlumnoGenero">Genero</label>
+                    <input type="text" id="editAlumnoGenero">
+                </div>
+                <div class="input-field">
+                    <label for="editAlumnoFecha_Nacimiento">Fecha de Nacimiento</label>
+                    <input type="text" id="editAlumnoFecha_Nacimiento">
+                </div>
+                <div class="input-field">
+                    <label for="editAlumnoNombre">Nombre</label>
+                    <input type="text" id="editAlumnoNombre">
+                </div>
+                <div class="input-field">
+                    <label for="editAlumnoApellido1">Primer Apellido</label>
+                    <input type="text" id="editAlumnoApellido1">
+                </div>
+                <div class="input-field">
+                    <label for="editAlumnoApellido2">Segundo Apellido</label>
+                    <input type="text" id="editAlumnoApellido2">
+                </div>
+                <div class="input-field">
+                    <label for="editAlumnoDireccion">Direccion</label>
+                    <input type="text" id="editAlumnoDireccion">
+                </div>
+                <div class="input-field">
+                    <label for="editAlumnoTelefono1">Telefono numero 1</label>
+                    <input type="text" id="editAlumnoTelefono1">
+                </div>
+                <div class="input-field">
+                    <label for="editAlumnoTelefono2">Telefono numero 2</label>
+                    <input type="text" id="editAlumnoTelefono2">
+                </div>
+                <div class="input-field">
+                    <label for="editAlumnoCorreo">Correo</label>
+                    <input type="text" id="editAlumnoCorreo">
+                </div>
+                <div class="input-field">
+                    <label for="id_ProvinciaEdit">Provincia</label>
+                    @Html.DropDownListFor(model => model.id_ProvinciaEdit,
+                   new SelectList("  "), " -- Selecciona una Provincia --",
+                   new { @class = "form-control", required = "required" })
+                </div>
+                <div class="input-field">
+                    <label for="id_CantonEdit">Cantón</label>
+                    @Html.DropDownListFor(model => model.id_CantonEdit,
+                   new SelectList("  "), " -- Selecciona un Cantón --",
+                   new { @class = "form-control", required = "required" })
+                </div>
+                <div class="input-field">
+                    <label for="id_DistritoEdit">Distrito</label>
+                    @Html.DropDownListFor(model => model.id_DistritoEdit,
+                   new SelectList("  "), " -- Selecciona un Distrito --",
+                   new { @class = "form-control", required = "required" })
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- Delete Alumno Modal -->
+    <div id="dialog-containerDEL">
+        <div id="dialogDEL" title="Eliminar el registro de una carrera">
+            <form>
+                <input type="hidden" id="DeleteAlumnoId">
+                
+                <p>¿Está seguro que desea eliminar este alumno?</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Insert Alumno Modal -->
+    <div id="dialog-containerINS">
+        <div id="dialogINS" title="Agregar un Alumno">
+            <form>
+                @*<input type="hidden" id="InsAlumnoId">*@
+                <div class="input-field">
+                    <label for="InsAlumnoFecha_Ingreso">Fecha de Ingreso</label>
+                    <input type="text" id="InsAlumnoFecha_Ingreso">
+                </div>
+                <div class="input-field">
+                    <label for="InsAlumnoCedula">Cedula</label>
+                    <input type="text" id="InsAlumnoCedula">
+                </div>
+                <div class="input-field">
+                    <label for="InsAlumnoGenero">Genero</label>
+                    <input type="text" id="InsAlumnoGenero">
+                </div>
+                <div class="input-field">
+                    <label for="InsAlumnoFecha_Nacimiento">Fecha de Nacimiento</label>
+                    <input type="text" id="InsAlumnoFecha_Nacimiento">
+                </div>
+                <div class="input-field">
+                    <label for="InsAlumnoNombre">Nombre</label>
+                    <input type="text" id="InsAlumnoNombre">
+                </div>
+                <div class="input-field">
+                    <label for="InsAlumnoApellido1">Primer Apellido</label>
+                    <input type="text" id="InsAlumnoApellido1">
+                </div>
+                <div class="input-field">
+                    <label for="InsAlumnoApellido2">Segundo Apellido</label>
+                    <input type="text" id="InsAlumnoApellido2">
+                </div>
+                <div class="input-field">
+                    <label for="InsAlumnoDireccion">Direccion</label>
+                    <input type="text" id="InsAlumnoDireccion">
+                </div>
+                <div class="input-field">
+                    <label for="InsAlumnoTelefono1">Telefono numero 1</label>
+                    <input type="text" id="InsAlumnoTelefono1">
+                </div>
+                <div class="input-field">
+                    <label for="InsAlumnoTelefono2">Telefono numero 2</label>
+                    <input type="text" id="InsAlumnoTelefono2">
+                </div>
+                <div class="input-field">
+                    <label for="InsAlumnoCorreo">Correo</label>
+                    <input type="text" id="InsAlumnoCorreo">
+                </div>
+                <div class="input-field">
+                    <label for="id_ProvinciaIns">Provincia</label>
+                    @Html.DropDownListFor(model => model.id_ProvinciaIns,
+                   new SelectList("  "), " -- Selecciona una Provincia --",
+                   new { @class = "form-control", required = "required" })
+                </div>
+                <div class="input-field">
+                    <label for="id_CantonIns">Cantón</label>
+                    @Html.DropDownListFor(model => model.id_CantonIns,
+                   new SelectList("  "), " -- Selecciona un Cantón --",
+                   new { @class = "form-control", required = "required" })
+                </div>
+                <div class="input-field">
+                    <label for="id_DistritoIns">Distrito</label>
+                    @Html.DropDownListFor(model => model.id_DistritoIns,
+                   new SelectList("  "), " -- Selecciona un Distrito --",
+                   new { @class = "form-control", required = "required" })
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+@section scripts{
+    @Scripts.Render("~/Scripts/MantenimientoAlumnos.js")
+}

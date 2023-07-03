@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SistemaMatriculaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Alumno">
+    <Key>
+      <PropertyRef Name="id_Alumno" />
+    </Key>
+    <Property Name="id_Alumno" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fecha_Ingreso" Type="date" Nullable="false" />
+    <Property Name="Cedula" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Genero" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="Fecha_Nacimiento" Type="date" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Apellido1" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Apellido2" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Direccion" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Telefono1" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Telefono2" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Correo" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="id_Provincia" Type="int" Nullable="false" />
+    <Property Name="id_Canton" Type="int" Nullable="false" />
+    <Property Name="id_Distrito" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Canton">
+    <Key>
+      <PropertyRef Name="id_Canton" />
+    </Key>
+    <Property Name="id_Canton" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_Provincia" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="usuarioCrea" Type="varchar" MaxLength="50" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="usuarioModifica" Type="varchar" MaxLength="50" />
+    <Property Name="fechaModifica" Type="datetime" />
+    <Property Name="vc_Estado" Type="varchar" MaxLength="3" />
+    <Property Name="id_CantonInec" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Carreras">
+    <Key>
+      <PropertyRef Name="id_Carrera" />
+    </Key>
+    <Property Name="id_Carrera" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_Grado" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Distrito">
+    <Key>
+      <PropertyRef Name="id_Distrito" />
+    </Key>
+    <Property Name="id_Distrito" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_Canton" Type="int" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="usuarioCrea" Type="varchar" MaxLength="50" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="usuarioModifica" Type="varchar" MaxLength="50" />
+    <Property Name="fechaModifica" Type="datetime" />
+    <Property Name="vc_Estado" Type="varchar" MaxLength="3" />
+    <Property Name="id_DistritoInec" Type="int" />
+  </EntityType>
+  <EntityType Name="EnvioCorreos">
+    <Key>
+      <PropertyRef Name="id_Envio" />
+    </Key>
+    <Property Name="id_Envio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Destinatario" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Asunto" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Cuerpo" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Estado" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="Bitacora" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Grados">
+    <Key>
+      <PropertyRef Name="id_Grado" />
+    </Key>
+    <Property Name="id_Grado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Materias">
+    <Key>
+      <PropertyRef Name="id_Materia" />
+    </Key>
+    <Property Name="id_Materia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Codigo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Cant_Creditos" Type="int" Nullable="false" />
+    <Property Name="Cant_Horas" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MateriasCarrera">
+    <Key>
+      <PropertyRef Name="id_Carrera" />
+      <PropertyRef Name="id_Materia" />
+    </Key>
+    <Property Name="id_Carrera" Type="int" Nullable="false" />
+    <Property Name="id_Materia" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Matricula">
+    <Key>
+      <PropertyRef Name="id_Matricula" />
+    </Key>
+    <Property Name="id_Matricula" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_Materia" Type="int" Nullable="false" />
+    <Property Name="id_Alumno" Type="int" Nullable="false" />
+    <Property Name="Nota" Type="int" Nullable="false" />
+    <Property Name="id_Periodo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Periodos">
+    <Key>
+      <PropertyRef Name="id_Periodo" />
+    </Key>
+    <Property Name="id_Periodo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Codigo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Fecha_Inicio" Type="date" Nullable="false" />
+    <Property Name="Fecha_Fin" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Provincia">
+    <Key>
+      <PropertyRef Name="id_Provincia" />
+    </Key>
+    <Property Name="id_Provincia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="usuarioCrea" Type="varchar" MaxLength="50" />
+    <Property Name="fechaCrea" Type="datetime" />
+    <Property Name="usuarioModifica" Type="varchar" MaxLength="50" />
+    <Property Name="fechaModifica" Type="datetime" />
+    <Property Name="vc_Estado" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="id_Usuario" />
+    </Key>
+    <Property Name="id_Usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_Alumno" Type="int" />
+    <Property Name="Usuario" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Contrasena" Type="binary" MaxLength="64" Nullable="false" />
+    <Property Name="UltimaAccion" Type="datetime" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="EsAlumno" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="Canton_ref_Provincia">
+    <End Role="Provincia" Type="Self.Provincia" Multiplicity="1" />
+    <End Role="Canton" Type="Self.Canton" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Provincia">
+        <PropertyRef Name="id_Provincia" />
+      </Principal>
+      <Dependent Role="Canton">
+        <PropertyRef Name="id_Provincia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Distrito_ref_Canton">
+    <End Role="Canton" Type="Self.Canton" Multiplicity="0..1" />
+    <End Role="Distrito" Type="Self.Distrito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Canton">
+        <PropertyRef Name="id_Canton" />
+      </Principal>
+      <Dependent Role="Distrito">
+        <PropertyRef Name="id_Canton" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Alumno__id_Canto__55009F39">
+    <End Role="Canton" Type="Self.Canton" Multiplicity="1" />
+    <End Role="Alumno" Type="Self.Alumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Canton">
+        <PropertyRef Name="id_Canton" />
+      </Principal>
+      <Dependent Role="Alumno">
+        <PropertyRef Name="id_Canton" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Alumno__id_Canto__6E01572D">
+    <End Role="Canton" Type="Self.Canton" Multiplicity="1" />
+    <End Role="Alumno" Type="Self.Alumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Canton">
+        <PropertyRef Name="id_Canton" />
+      </Principal>
+      <Dependent Role="Alumno">
+        <PropertyRef Name="id_Canton" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Alumno__id_Distr__55F4C372">
+    <End Role="Distrito" Type="Self.Distrito" Multiplicity="1" />
+    <End Role="Alumno" Type="Self.Alumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Distrito">
+        <PropertyRef Name="id_Distrito" />
+      </Principal>
+      <Dependent Role="Alumno">
+        <PropertyRef Name="id_Distrito" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Alumno__id_Distr__6EF57B66">
+    <End Role="Distrito" Type="Self.Distrito" Multiplicity="1" />
+    <End Role="Alumno" Type="Self.Alumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Distrito">
+        <PropertyRef Name="id_Distrito" />
+      </Principal>
+      <Dependent Role="Alumno">
+        <PropertyRef Name="id_Distrito" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Alumno__id_Provi__540C7B00">
+    <End Role="Provincia" Type="Self.Provincia" Multiplicity="1" />
+    <End Role="Alumno" Type="Self.Alumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Provincia">
+        <PropertyRef Name="id_Provincia" />
+      </Principal>
+      <Dependent Role="Alumno">
+        <PropertyRef Name="id_Provincia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Alumno__id_Provi__6D0D32F4">
+    <End Role="Provincia" Type="Self.Provincia" Multiplicity="1" />
+    <End Role="Alumno" Type="Self.Alumno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Provincia">
+        <PropertyRef Name="id_Provincia" />
+      </Principal>
+      <Dependent Role="Alumno">
+        <PropertyRef Name="id_Provincia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Carreras__Descri__5AEE82B9">
+    <End Role="Grados" Type="Self.Grados" Multiplicity="1" />
+    <End Role="Carreras" Type="Self.Carreras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grados">
+        <PropertyRef Name="id_Grado" />
+      </Principal>
+      <Dependent Role="Carreras">
+        <PropertyRef Name="id_Grado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MateriasC__id_Ca__66603565">
+    <End Role="Carreras" Type="Self.Carreras" Multiplicity="1" />
+    <End Role="MateriasCarrera" Type="Self.MateriasCarrera" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Carreras">
+        <PropertyRef Name="id_Carrera" />
+      </Principal>
+      <Dependent Role="MateriasCarrera">
+        <PropertyRef Name="id_Carrera" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MateriasC__id_Ma__6754599E">
+    <End Role="Materias" Type="Self.Materias" Multiplicity="1" />
+    <End Role="MateriasCarrera" Type="Self.MateriasCarrera" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Materias">
+        <PropertyRef Name="id_Materia" />
+      </Principal>
+      <Dependent Role="MateriasCarrera">
+        <PropertyRef Name="id_Materia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Matricula__id_Al__0B91BA14">
+    <End Role="Alumno" Type="Self.Alumno" Multiplicity="1" />
+    <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumno">
+        <PropertyRef Name="id_Alumno" />
+      </Principal>
+      <Dependent Role="Matricula">
+        <PropertyRef Name="id_Alumno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Matricula__id_Ma__0A9D95DB">
+    <End Role="Materias" Type="Self.Materias" Multiplicity="1" />
+    <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Materias">
+        <PropertyRef Name="id_Materia" />
+      </Principal>
+      <Dependent Role="Matricula">
+        <PropertyRef Name="id_Materia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Matricula__id_Pe__0C85DE4D">
+    <End Role="Periodos" Type="Self.Periodos" Multiplicity="1" />
+    <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Periodos">
+        <PropertyRef Name="id_Periodo" />
+      </Principal>
+      <Dependent Role="Matricula">
+        <PropertyRef Name="id_Periodo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuarios__id_Alu__797309D9">
+    <End Role="Alumno" Type="Self.Alumno" Multiplicity="0..1" />
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alumno">
+        <PropertyRef Name="id_Alumno" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="id_Alumno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="RetornaCantones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nombre" Type="varchar" Mode="In" />
+    <Parameter Name="id_Provincia" Type="int" Mode="In" />
+  </Function>
+  <Function Name="RetornaCantonesID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Canton" Type="int" Mode="In" />
+  </Function>
+  <Function Name="RetornaProvincias" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_ActualizaAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Alumno" Type="int" Mode="In" />
+    <Parameter Name="Fecha_Ingreso" Type="date" Mode="In" />
+    <Parameter Name="Cedula" Type="varchar" Mode="In" />
+    <Parameter Name="Genero" Type="char" Mode="In" />
+    <Parameter Name="Fecha_Nacimiento" Type="date" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Apellido1" Type="varchar" Mode="In" />
+    <Parameter Name="Apellido2" Type="varchar" Mode="In" />
+    <Parameter Name="Direccion" Type="varchar" Mode="In" />
+    <Parameter Name="Telefono1" Type="varchar" Mode="In" />
+    <Parameter Name="Telefono2" Type="varchar" Mode="In" />
+    <Parameter Name="Correo" Type="varchar" Mode="In" />
+    <Parameter Name="id_Provincia" Type="int" Mode="In" />
+    <Parameter Name="id_Canton" Type="int" Mode="In" />
+    <Parameter Name="id_Distrito" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_ActualizaCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Carrera" Type="int" Mode="In" />
+    <Parameter Name="id_Grado" Type="int" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_ActualizaCorreo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Envio" Type="int" Mode="In" />
+    <Parameter Name="Estado" Type="char" Mode="In" />
+    <Parameter Name="Bitacora" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_ActualizaGrados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Grado" Type="int" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_ActualizaMateria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Materia" Type="int" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Codigo" Type="varchar" Mode="In" />
+    <Parameter Name="Cant_Creditos" Type="int" Mode="In" />
+    <Parameter Name="Cant_Horas" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_ActualizaMateriaCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_CarreraOLD" Type="int" Mode="In" />
+    <Parameter Name="id_MateriaOLD" Type="int" Mode="In" />
+    <Parameter Name="id_CarreraNEW" Type="int" Mode="In" />
+    <Parameter Name="id_MateriaNEW" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_ActualizaMatricula" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Matricula" Type="int" Mode="In" />
+    <Parameter Name="id_Materia" Type="int" Mode="In" />
+    <Parameter Name="id_Alumno" Type="int" Mode="In" />
+    <Parameter Name="Nota" Type="int" Mode="In" />
+    <Parameter Name="id_Periodo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_ActualizaPeriodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Periodo" Type="int" Mode="In" />
+    <Parameter Name="Codigo" Type="varchar" Mode="In" />
+    <Parameter Name="Fecha_Inicio" Type="date" Mode="In" />
+    <Parameter Name="Fecha_Fin" Type="date" Mode="In" />
+  </Function>
+  <Function Name="sp_ActualizaUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Usuario" Type="int" Mode="In" />
+    <Parameter Name="id_Alumno" Type="int" Mode="In" />
+    <Parameter Name="Usuario" Type="varchar" Mode="In" />
+    <Parameter Name="Contrasena" Type="varchar(max)" Mode="In" />
+    <Parameter Name="UltimaAccion" Type="datetime" Mode="In" />
+    <Parameter Name="Activo" Type="bit" Mode="In" />
+    <Parameter Name="EsAlumno" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="sp_EliminaAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Alumno" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_EliminaCanton" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Canton" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_EliminaCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Carrera" Type="int" Mode="In" />
+    <Parameter Name="id_Grado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_EliminaGrados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Grado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_EliminaMateria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Materia" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_EliminaMateriaCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Carrera" Type="int" Mode="In" />
+    <Parameter Name="id_Materia" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_EliminaMatricula" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Matricula" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_EliminaPeriodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Periodo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_EliminaUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Usuario" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertaAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fecha_Ingreso" Type="date" Mode="In" />
+    <Parameter Name="Cedula" Type="varchar" Mode="In" />
+    <Parameter Name="Genero" Type="char" Mode="In" />
+    <Parameter Name="Fecha_Nacimiento" Type="date" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Apellido1" Type="varchar" Mode="In" />
+    <Parameter Name="Apellido2" Type="varchar" Mode="In" />
+    <Parameter Name="Direccion" Type="varchar" Mode="In" />
+    <Parameter Name="Telefono1" Type="varchar" Mode="In" />
+    <Parameter Name="Telefono2" Type="varchar" Mode="In" />
+    <Parameter Name="Correo" Type="varchar" Mode="In" />
+    <Parameter Name="id_Provincia" Type="int" Mode="In" />
+    <Parameter Name="id_Canton" Type="int" Mode="In" />
+    <Parameter Name="id_Distrito" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertaCanton" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Provincia" Type="int" Mode="In" />
+    <Parameter Name="nombre" Type="varchar" Mode="In" />
+    <Parameter Name="id_CantonInec" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertaCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Grado" Type="int" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertaCorreo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Destinatario" Type="varchar" Mode="In" />
+    <Parameter Name="Asunto" Type="varchar" Mode="In" />
+    <Parameter Name="Cuerpo" Type="varchar" Mode="In" />
+    <Parameter Name="Estado" Type="char" Mode="In" />
+    <Parameter Name="Bitacora" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertaGrados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertaMateria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Codigo" Type="varchar" Mode="In" />
+    <Parameter Name="Cant_Creditos" Type="int" Mode="In" />
+    <Parameter Name="Cant_Horas" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertaMateriaCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Carrera" Type="int" Mode="In" />
+    <Parameter Name="id_Materia" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertaMatricula" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Materia" Type="int" Mode="In" />
+    <Parameter Name="id_Alumno" Type="int" Mode="In" />
+    <Parameter Name="Nota" Type="int" Mode="In" />
+    <Parameter Name="id_Periodo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertaPeriodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Codigo" Type="varchar" Mode="In" />
+    <Parameter Name="Fecha_Inicio" Type="date" Mode="In" />
+    <Parameter Name="Fecha_Fin" Type="date" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertaUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Alumno" Type="int" Mode="In" />
+    <Parameter Name="Usuario" Type="varchar" Mode="In" />
+    <Parameter Name="Contrasena" Type="varchar(max)" Mode="In" />
+    <Parameter Name="UltimaAccion" Type="datetime" Mode="In" />
+    <Parameter Name="Activo" Type="bit" Mode="In" />
+    <Parameter Name="EsAlumno" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="sp_ModificaCanton" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Canton" Type="int" Mode="In" />
+    <Parameter Name="id_Provincia" Type="int" Mode="In" />
+    <Parameter Name="nombre" Type="varchar" Mode="In" />
+    <Parameter Name="id_CantonInec" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_ReporteMatriculaGen" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_ReporteMatriculaPorEstudiante" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pLogin" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_ReprocesaCorreosError" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_RetornaAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_RetornaAlumnoData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pLogin" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_RetornaAlumnoporID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Alumno" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_RetornaCantonPorProvincia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Provincia" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_RetornaCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_RetornaCarreraPorID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Carrera" Type="int" Mode="In" />
+    <Parameter Name="id_Grado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_RetornaCorreosPendientes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_RetornaDistritoPorCanton" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Canton" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_RetornaGrados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_RetornaGradosPorID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Grado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_RetornaInicioSesion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Usuario" Type="varchar" Mode="In" />
+    <Parameter Name="Contrasena" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_RetornaMateria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_RetornaMateriaPorID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Materia" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_RetornaMateriasAlumnoporID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Alumno" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_RetornaMateriasCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_RetornaMateriasCarreraPorCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Materia" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_RetornaMateriasCarreraPorMateria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Carrera" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_RetornaMateriasPeriodoporID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Periodo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_RetornaMatricula" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_RetornaMatriculaporAlumno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Alumno" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_RetornaPeriodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_RetornaPeriodoporID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Periodo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_RetornaUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_RetornaUsuarioporID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Usuario" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="SistemaMatriculaModelStoreContainer">
+    <EntitySet Name="Alumno" EntityType="Self.Alumno" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Canton" EntityType="Self.Canton" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Carreras" EntityType="Self.Carreras" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Distrito" EntityType="Self.Distrito" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EnvioCorreos" EntityType="Self.EnvioCorreos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Grados" EntityType="Self.Grados" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Materias" EntityType="Self.Materias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MateriasCarrera" EntityType="Self.MateriasCarrera" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Matricula" EntityType="Self.Matricula" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Periodos" EntityType="Self.Periodos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Provincia" EntityType="Self.Provincia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="Canton_ref_Provincia" Association="Self.Canton_ref_Provincia">
+      <End Role="Provincia" EntitySet="Provincia" />
+      <End Role="Canton" EntitySet="Canton" />
+    </AssociationSet>
+    <AssociationSet Name="Distrito_ref_Canton" Association="Self.Distrito_ref_Canton">
+      <End Role="Canton" EntitySet="Canton" />
+      <End Role="Distrito" EntitySet="Distrito" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Alumno__id_Canto__55009F39" Association="Self.FK__Alumno__id_Canto__55009F39">
+      <End Role="Canton" EntitySet="Canton" />
+      <End Role="Alumno" EntitySet="Alumno" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Alumno__id_Canto__6E01572D" Association="Self.FK__Alumno__id_Canto__6E01572D">
+      <End Role="Canton" EntitySet="Canton" />
+      <End Role="Alumno" EntitySet="Alumno" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Alumno__id_Distr__55F4C372" Association="Self.FK__Alumno__id_Distr__55F4C372">
+      <End Role="Distrito" EntitySet="Distrito" />
+      <End Role="Alumno" EntitySet="Alumno" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Alumno__id_Distr__6EF57B66" Association="Self.FK__Alumno__id_Distr__6EF57B66">
+      <End Role="Distrito" EntitySet="Distrito" />
+      <End Role="Alumno" EntitySet="Alumno" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Alumno__id_Provi__540C7B00" Association="Self.FK__Alumno__id_Provi__540C7B00">
+      <End Role="Provincia" EntitySet="Provincia" />
+      <End Role="Alumno" EntitySet="Alumno" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Alumno__id_Provi__6D0D32F4" Association="Self.FK__Alumno__id_Provi__6D0D32F4">
+      <End Role="Provincia" EntitySet="Provincia" />
+      <End Role="Alumno" EntitySet="Alumno" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Carreras__Descri__5AEE82B9" Association="Self.FK__Carreras__Descri__5AEE82B9">
+      <End Role="Grados" EntitySet="Grados" />
+      <End Role="Carreras" EntitySet="Carreras" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MateriasC__id_Ca__66603565" Association="Self.FK__MateriasC__id_Ca__66603565">
+      <End Role="Carreras" EntitySet="Carreras" />
+      <End Role="MateriasCarrera" EntitySet="MateriasCarrera" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MateriasC__id_Ma__6754599E" Association="Self.FK__MateriasC__id_Ma__6754599E">
+      <End Role="Materias" EntitySet="Materias" />
+      <End Role="MateriasCarrera" EntitySet="MateriasCarrera" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Matricula__id_Al__0B91BA14" Association="Self.FK__Matricula__id_Al__0B91BA14">
+      <End Role="Alumno" EntitySet="Alumno" />
+      <End Role="Matricula" EntitySet="Matricula" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Matricula__id_Ma__0A9D95DB" Association="Self.FK__Matricula__id_Ma__0A9D95DB">
+      <End Role="Materias" EntitySet="Materias" />
+      <End Role="Matricula" EntitySet="Matricula" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Matricula__id_Pe__0C85DE4D" Association="Self.FK__Matricula__id_Pe__0C85DE4D">
+      <End Role="Periodos" EntitySet="Periodos" />
+      <End Role="Matricula" EntitySet="Matricula" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuarios__id_Alu__797309D9" Association="Self.FK__Usuarios__id_Alu__797309D9">
+      <End Role="Alumno" EntitySet="Alumno" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

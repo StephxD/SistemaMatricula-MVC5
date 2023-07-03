@@ -1,0 +1,39 @@
+﻿.sprite-grado {
+    background-image: url("/Content/IMG/sprites2.png");
+    background-repeat: no-repeat;
+    width: 46px;
+    height: 44px;
+    background-position: -95px 0px;
+
+}
+
+.sprite-grado-id {
+    background-image: url("/Content/IMG/sprites2.png");
+    background-repeat: no-repeat;
+    width: 59px;
+    height: 49px;
+    background-position: -92px 0px;
+    margin-left: 15px; /* Agregar margen a la derecha */
+}
+
+.sprite-grado-nombre {
+    background-image: url("/Content/IMG/sprites2.png");
+    background-repeat: no-repeat;
+    width: 55px;
+    height: 44px;
+    background-position: -92px 0px;
+    margin-left: 5px; /* Agregar margen a la derecha */
+}
+
+.sprite-grado-descripcion {
+    background-image: url("/Content/IMG/sprites2.png");
+    background-repeat: no-repeat;
+    width: 55px;
+    height: 46px;
+    background-position: -92px 0px;
+    margin-left: 15px; /* Agregar margen a la derecha */
+}
+.form-group {
+    display: flex;
+    align-items: center;
+}
